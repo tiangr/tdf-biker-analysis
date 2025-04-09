@@ -91,13 +91,15 @@ for year in range(1903,2025):
         try: # Gets rid of Team time trials
             table = table[columns_to_keep]
         except:
-            print("NOT ",year, stage)
+            print("TTT ",year, stage)
             continue
         # Drop false rows (disqualifications)
         table = table.dropna(subset="Rnk")
         table = table[table["Rnk"] != "DSQ"]
         # Format time properly
         table["Time"] = table["Time"].str.split(" ").str[0]
+        if table.loc[0, "Time"] == table.loc[1, "Time"]: # Sometimes in the data the second row repeats the time of the first rider (same finish time)
+            table.loc[1, "Time"] = "0"
         table.loc[0, "Time"] = "0"
         table["Time"] = table["Time"].replace(",,", None).ffill()
         table["Time"] = table["Time"].apply(time_to_seconds)
@@ -110,12 +112,16 @@ for year in range(1903,2025):
         # Table cleaning
         table = table.drop(columns=["Team","Rnk"])
         table = table.reset_index(drop=True)
+        table["Time"] = pd.to_numeric(table["Time"], errors="coerce")
+        if not table["Time"].is_monotonic_increasing: # Some tables are wrong
+            continue
         
         # Adding podiums
         if len(table) >= 3:
             add_podiums(table)
         
         # Constructing/Adding to - Multigraph
+        max_diff = table.loc[-1, "Time"]
         for i, row in table.iterrows():
             G.add_node(row["Rider"], time=row["Time"])
 
@@ -126,7 +132,7 @@ for year in range(1903,2025):
             for j in range(i):
                 prev_rider = table.loc[j, "Rider"]
                 prev_time = int(table.loc[j, "Time"])
-                weight = max(current_time - prev_time, 1)
+                weight = max(current_time - prev_time, 1) / max_diff
                 G.add_edge(current_rider, prev_rider, weight=weight)
 nx.write_pajek(G, f"TDF")
 
