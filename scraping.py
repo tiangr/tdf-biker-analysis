@@ -6,7 +6,8 @@ import io
 import os
 import networkx as nx
 
-columns = ["Rider", "1st", "2nd", "3rd", "Total Wins"]
+# GC - overall winner (Yellow Jersey), POINTS - points classification (Green Jersey), KOM - King of the Mountains (Polka Dot Jersey), YOUTH - best young rider (White Jersey)
+columns = ["Rider", "1st", "2nd", "3rd", "GC", "POINTS", "KOM", "YOUTH"]
 stats_df = pd.DataFrame(columns=columns)
 
 # ------------------------ Helpers ------------------------
@@ -30,7 +31,7 @@ def create_stats_file(sorted_stats):
 
 def add_new_rider(rider):
     global stats_df
-    new_row = pd.DataFrame({"Rider": [rider], "1st": [0], "2nd": [0], "3rd": [0], "Total Wins": [0]})
+    new_row = pd.DataFrame({"Rider": [rider], "1st": [0], "2nd": [0], "3rd": [0], "GC": [0], "POINTS": [0], "KOM": [0], "YOUTH": [0]})
     stats_df = pd.concat([stats_df, new_row], ignore_index=True)
 
 def add_podiums(table):
@@ -41,16 +42,28 @@ def add_podiums(table):
             add_new_rider(rider)
         stats_df.loc[stats_df["Rider"] == rider, columns[i+1]] += 1
 
-def get_overall_winner(response):
+def get_categories_for_year(year):
+    if 1903 <= year <= 1932:
+        return {"GC": 1}
+    elif 1933 <= year <= 1952:
+        return {"GC": 1, "KOM": 2}
+    elif 1953 <= year <= 1974:
+        return {"GC": 1, "POINTS": 2, "KOM": 3}
+    elif 1975 <= year <= 2024:
+        return {"GC": 1, "POINTS": 2, "KOM": 3, "YOUTH": 4}
+    else:
+        return {}
+    
+def get_overall_winner_of_category(response, category, number_of_categorie):
     global stats_df
     try:
-        overall_winner = pd.read_html(io.StringIO(response))[1]
-        overall_winner = overall_winner.loc[0, "Rider"].replace(f" {overall_winner.loc[0, 'Team']}", "")
+        winner = pd.read_html(io.StringIO(response))[number_of_categorie]
+        winner = winner.loc[0, "Rider"].replace(f" {winner.loc[0, 'Team']}", "")
     except:
         return
-    if overall_winner not in stats_df["Rider"].values:
-        add_new_rider(overall_winner)
-    stats_df.loc[stats_df["Rider"] == overall_winner, "Total Wins"] += 1
+    if winner not in stats_df["Rider"].values:
+        add_new_rider(winner)
+    stats_df.loc[stats_df["Rider"] == winner, category] += 1
 
 def guess_stage_type_and_length(stage_title):
     #CHATGPT nepreverjeno
@@ -101,7 +114,9 @@ for year in range(1903, 2025):
     except:
         continue
 
-    get_overall_winner(response)
+    categories = get_categories_for_year(year)
+    for category, index in categories.items():
+        get_overall_winner_of_category(response, category, index)
 
     for stage in range(1, no_stages+1):
         if stage == 20 and year == 1979:
@@ -200,6 +215,6 @@ for mode in graph_modes:
     nx.write_pajek(graphs[mode], filename)
 
 # Save podiums
-stats_df = stats_df.sort_values(by=["Total Wins", "1st", "2nd", "3rd"], ascending=False).reset_index(drop=True)
+stats_df = stats_df.sort_values(by=["GC", "1st", "2nd", "3rd"], ascending=False).reset_index(drop=True)
 create_stats_file(stats_df)
 print("All graphs and stats saved.")
