@@ -95,7 +95,7 @@ for year in range(1903, 2025):
         continue
 
     no_stages = response.find("Stage ")
-    no_stages = response[no_stages+6 : no_stages+9]
+    no_stages = response[no_stages+5 : no_stages+8]
     try:
         no_stages = int(no_stages)
     except:
@@ -138,13 +138,17 @@ for year in range(1903, 2025):
         table["Time"] = table["Time"].replace(",,", None).ffill()
         table["Time"] = table["Time"].apply(time_to_seconds)
         table["Pnt"] = pd.to_numeric(table["Pnt"], errors="coerce").fillna(0)
-        table = table.dropna(subset=["Time"])
+        table = table.dropna(subset=["Time", "Rnk"])
         try:
             table["Rider"] = table.apply(lambda row: row["Rider"].replace(f" {row['Team']}", ""), axis=1)
         except:
             table.loc[0, "Time"] = "0"
         table = table.drop(columns=["Team", "Rnk"])
         table = table.reset_index(drop=True)
+        
+        table["Time"] = pd.to_numeric(table["Time"], errors="coerce")
+        if not table["Time"].is_monotonic_increasing: # Some tables are wrong
+            continue
 
         if len(table) >= 3:
             add_podiums(table)
