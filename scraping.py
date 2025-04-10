@@ -104,6 +104,8 @@ for year in range(1903, 2025):
     get_overall_winner(response)
 
     for stage in range(1, no_stages+1):
+        if stage == 20 and year == 1979:
+            continue
         stage_url = f"https://www.procyclingstats.com/race/tour-de-france/{year}/stage-{stage}"
         print(f"  Stage {stage}")
         try:
@@ -153,7 +155,7 @@ for year in range(1903, 2025):
         if len(table) >= 3:
             add_podiums(table)
 
-        winner_time = int(table.loc[0, "Time"])
+        loser_time = int(table.loc[len(table)-1, "Time"])
 
         stage_title_tag = response.find("title")
         stage_title = stage_title_tag.text if stage_title_tag else ""
@@ -173,7 +175,7 @@ for year in range(1903, 2025):
                 prev_time = int(table.loc[j, "Time"])
                 points = table.loc[j, "Pnt"]
                 time_diff = current_time - prev_time
-                normalized_diff = time_diff / max(winner_time, 1)
+                normalized_diff = time_diff / max(loser_time, 1)
                 scaled_diff = normalized_diff * scale
 
                 # Depending on graph mode we add different weights
