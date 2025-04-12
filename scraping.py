@@ -95,16 +95,20 @@ def scaling_factor(stage_type, length_km):
 # ------------------------------------------------
 
 # Graphs modes
-graph_modes = ["no_weights", "time_diff", "normalized_time_diff", "scaled_time_diff", "points"]
+graph_modes = ["no_weights", "time_diff", "normalized_time_diff", "scaled_time_diff", "points", "pure_points"]
 graphs = {mode: nx.MultiDiGraph() for mode in graph_modes}
 
 edition = "a"
+eddy = 0 # Delete when Eddy stats are fixed
+
+# For Eddy Merckx do range(1968, 1979)
 for year in range(1903, 2025):
     print(f"Processing year: {year}")
     url = f"https://www.procyclingstats.com/race/tour-de-france/{year}/gc"
     try:
         response = BeautifulSoup(requests.get(url).content, 'html.parser').prettify()
     except:
+        print(f"Skipped year {year}")
         continue
 
     no_stages = response.find("Stage ")
@@ -112,6 +116,7 @@ for year in range(1903, 2025):
     try:
         no_stages = int(no_stages)
     except:
+        print(f"Skipped year {year}")
         continue
 
     categories = get_categories_for_year(year)
@@ -121,8 +126,8 @@ for year in range(1903, 2025):
     for stage in range(1, no_stages+1):
         if stage == 20 and year == 1979:
             continue
+        true_stage = stage
         stage_url = f"https://www.procyclingstats.com/race/tour-de-france/{year}/stage-{stage}"
-        print(f"  Stage {stage}")
         try:
             response = BeautifulSoup(requests.get(stage_url).content, 'html.parser')
             html = response.prettify()
@@ -135,17 +140,19 @@ for year in range(1903, 2025):
                 if edition == "a":
                     stage -= 1
                     edition = "b"
+                    true_stage = f"{true_stage}a"
                 else:
                     edition = "a"
+                    true_stage = f"{true_stage}b"
             except:
-                print(f"    Failed to load stage {stage}")
+                print(f"    Failed to load stage {true_stage}")
                 continue
 
         columns_to_keep = ["Rnk", "Rider", "Team", "Pnt", "Time"]
         try:
             table = table[columns_to_keep]
         except:
-            print(f"    Skipping team stage at {year} stage {stage}")
+            print(f"    Skipping team stage at {year} stage {true_stage}")
             continue
 
         table = table.dropna(subset=["Rnk"])
@@ -157,15 +164,23 @@ for year in range(1903, 2025):
         table["Pnt"] = pd.to_numeric(table["Pnt"], errors="coerce").fillna(0)
         table = table.dropna(subset=["Time", "Rnk"])
         try:
-            table["Rider"] = table.apply(lambda row: row["Rider"].replace(f" {row['Team']}", ""), axis=1)
+            table["Rider"] = table.apply(lambda row: row["Rider"].replace(f" {row['Team']}", "").strip(), axis=1)
         except:
             table.loc[0, "Time"] = "0"
         table = table.drop(columns=["Team", "Rnk"])
         table = table.reset_index(drop=True)
         
         table["Time"] = pd.to_numeric(table["Time"], errors="coerce")
-        if not table["Time"].is_monotonic_increasing: # Some tables are wrong
+        if not table["Time"].is_monotonic_increasing: 
+            # TODO: Some tables are wrong - Here we need to redirect to firstcycling.com and scrape the CORRECT data
+            # Points are not present on the firstcycling.com, either we put points to first 20 as 
+            # is standard by hard coding the points OR just keep procyclingstats.com table and provide points like that.
+            print(f"    Skipping {year} stage {true_stage} because not monotonic increasing time")
             continue
+
+        if "MERCKX Eddy" in table.loc[0,"Rider"]: # TODO: Delete when fixed, needs 34 wins.
+            eddy += 1
+            print(f"Eddy Merckx at {year} - {true_stage} win #{eddy}")
 
         if len(table) >= 3:
             add_podiums(table)
@@ -205,7 +220,10 @@ for year in range(1903, 2025):
                         weight = scaled_diff
                     elif mode == "points":
                         weight = points if points > 0 else 1
+                    elif mode == "pure_points": # TODO: Should have much less edges, check it. 
+                        weight = points
                     graphs[mode].add_edge(current_rider, prev_rider, weight=weight)
+                    
 
 # ------------------------------------------------
 os.makedirs("output_graphs", exist_ok=True)
