@@ -1,0 +1,60 @@
+1906 stage 3 - Enter
+1907 stage 2 - 73 and 44445
+1907 stage 7 - Enter
+1907 stage 13 - 11 and 11010
+1911 stage 8 - Enter
+1924 stage 3 - 73 and 6824
+1924 stage 7 - Enter
+1927 stage 4 - Enter
+1928 stage 17 - 54 and 2634
+1934 stage 5 - 1 and 0
+1935 stage 8 - 1935 9
+1938 stage 21 - flip, 1 and 0 
+1939 stage 2b - 1939 3, 29 and 454, 73 and 1279, 77 and 2229, 78 and 2229
+1939 stage 6a - 1939 7, 64 and 329
+1951 stage 7 - Enter
+1951 stage 20 - Enter
+1951 stage 22 - Enter
+1952 stage 18 - Enter
+1953 stage 16 - Enter
+1956 stage 5 - 1956 6
+1956 stage 11 - 1956 12, 35 and 302
+1956 stage 18 - 1956 19, 33 1122
+1961 stage 21 - 1961 22
+1964 stage 18 - 1964 20
+1965 stage 6 - 1965 8
+1965 stage 8 - 1965 10
+1968 stage 7 - 1968 9
+1968 stage 10 - 1968 12
+1968 stage 16 - 1968 18
+1970 stage 6 - 1970 8
+1970 stage 12 - 1970 16
+1971 stage 2 - 1971 4
+1971 stage 17 - 1971 21
+1971 stage 18 - 1971 22
+1971 stage 19 - 1971 23
+1972 stage 6 - 1972 8, 19 and 93
+1973 stage 2 - 1973 4
+1973 stage 3 - 1973 5
+1973 stage 5 - 1973 7, 119 and 666, 120 and 666, 121 and 666
+1973 stage 11 - 1973 14, 80 and 0, 82 and 0, 89 and 72
+1973 stage 16a - 1973 20
+1974 stage 7 - 120 and 19, 122 and 19, 123 and 19
+1974 stage 10 - 1974 12, 6 and 62, 19 and 223, 20 and 223, 21 and 223, 22 and 223, 23 and 223, 25 and 223
+1974 stage 14 - 1974 16
+1974 stage 20 - 1974 23
+1975 stage 3 - 1975 4
+1975 stage 19 - 1975 21
+1976 stage 7 - 1976 8
+1976 stage 21 - 1976 24
+1977 stage 11 - 1977 13
+1977 stage 21 - 1977 25, 35 and 19, 44 and 19
+1980 stage 10 - 1980 12, 5 and 2
+1982 stage 7 - 151 and 23
+1983 stage 3 - 136 and 2192 (check again)
+1984 stage 7 - Enter
+1985 stage 4 - 172 and 80
+1985 stage 6 - Enter
+1985 stage 7 - 105 and 35
+1985 stage 14 - 47 and 240, 48 and 240, 42 and 213, 24 and 213, 19 and 158, 20 and 158 (check again)
+CONTINUE

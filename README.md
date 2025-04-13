@@ -5,6 +5,9 @@ This project analyzes the complete Tour de France dataset to explore the greates
 ## TODO's
 - [x] Scraping tables from ProCyclingStats
 - [🛠️] Correct scraped data (Too many skipped stages due to wrong data in source)
+    - [ ] Migrate helper functions
+    - [ ] Automate corrections.txt
+    - [ ] Editions of stages by letters fix, only a and b so far
 - [x] Construct various MultiDiGraphs:
     - [x] With no weights
     - [x] Weights are time differences

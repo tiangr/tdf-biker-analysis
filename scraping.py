@@ -5,6 +5,9 @@ import numpy as np
 import io
 import os
 import networkx as nx
+import helper
+
+pd.set_option('display.max_rows', None)      # Show all rows
 
 # GC - overall winner (Yellow Jersey), POINTS - points classification (Green Jersey), KOM - King of the Mountains (Polka Dot Jersey), YOUTH - best young rider (White Jersey)
 columns = ["Rider", "1st", "2nd", "3rd", "GC", "POINTS", "KOM", "YOUTH"]
@@ -92,7 +95,7 @@ def scaling_factor(stage_type, length_km):
     }
     return base.get(stage_type, 1.0) * (length_km / 100)
 
-# ------------------------------------------------
+# ----------------------- Main -------------------------
 
 # Graphs modes
 graph_modes = ["no_weights", "time_diff", "normalized_time_diff", "scaled_time_diff", "points", "pure_points"]
@@ -100,9 +103,9 @@ graphs = {mode: nx.MultiDiGraph() for mode in graph_modes}
 
 edition = "a"
 eddy = 0 # Delete when Eddy stats are fixed
-
 # For Eddy Merckx do range(1968, 1979)
-for year in range(1903, 2025):
+# 1903 - 2025
+for year in range(1973, 2025):
     print(f"Processing year: {year}")
     url = f"https://www.procyclingstats.com/race/tour-de-france/{year}/gc"
     try:
@@ -111,6 +114,7 @@ for year in range(1903, 2025):
         print(f"Skipped year {year}")
         continue
 
+    extended_stage = 0
     no_stages = response.find("Stage ")
     no_stages = response[no_stages+5 : no_stages+8]
     try:
@@ -124,6 +128,7 @@ for year in range(1903, 2025):
         get_overall_winner_of_category(response, category, index)
 
     for stage in range(1, no_stages+1):
+        extended_stage += 1
         if stage == 20 and year == 1979:
             continue
         true_stage = stage
@@ -134,6 +139,7 @@ for year in range(1903, 2025):
             table = pd.read_html(io.StringIO(html))[0]
         except:
             try:
+                # TODO: Add edition = "c", debug properly. ALSO include Prologue stages
                 response = BeautifulSoup(requests.get(stage_url + edition).content, 'html.parser')
                 html = response.prettify()
                 table = pd.read_html(io.StringIO(html))[0]
@@ -156,7 +162,7 @@ for year in range(1903, 2025):
             continue
 
         table = table.dropna(subset=["Rnk"])
-        table = table[table["Rnk"] != "DSQ"]
+        table = table[(table["Rnk"] != "DSQ") & (table["Rnk"] != "OTL") & (table["Rnk"] != "DNF")]
         table["Time"] = table["Time"].str.split(" ").str[0]
         table.loc[0, "Time"] = "0"
         table["Time"] = table["Time"].replace(",,", None).ffill()
@@ -171,12 +177,11 @@ for year in range(1903, 2025):
         table = table.reset_index(drop=True)
         
         table["Time"] = pd.to_numeric(table["Time"], errors="coerce")
-        if not table["Time"].is_monotonic_increasing: 
-            # TODO: Some tables are wrong - Here we need to redirect to firstcycling.com and scrape the CORRECT data
-            # Points are not present on the firstcycling.com, either we put points to first 20 as 
-            # is standard by hard coding the points OR just keep procyclingstats.com table and provide points like that.
-            print(f"    Skipping {year} stage {true_stage} because not monotonic increasing time")
-            continue
+        while not table["Time"].is_monotonic_increasing:
+            table = helper.scrape_1stcycling(year,extended_stage,table[["Rider","Pnt","Time"]],true_stage)
+            if type(table) == None:
+                print(f"    Skipping {year} stage {true_stage} because not monotonic increasing time")
+                break
 
         if "MERCKX Eddy" in table.loc[0,"Rider"]: # TODO: Delete when fixed, needs 34 wins.
             eddy += 1
@@ -225,7 +230,7 @@ for year in range(1903, 2025):
                     graphs[mode].add_edge(current_rider, prev_rider, weight=weight)
                     
 
-# ------------------------------------------------
+# ---------------------- Output --------------------------
 os.makedirs("output_graphs", exist_ok=True)
 for mode in graph_modes:
     filename = f"output_graphs/TDF_{mode}.net"
