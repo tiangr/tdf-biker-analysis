@@ -101,11 +101,11 @@ def scaling_factor(stage_type, length_km):
 graph_modes = ["no_weights", "time_diff", "normalized_time_diff", "scaled_time_diff", "points", "pure_points"]
 graphs = {mode: nx.MultiDiGraph() for mode in graph_modes}
 
-edition = "a"
+edition = "a" # TODO: Add edition = "c", debug properly. ALSO include Prologue stages
 eddy = 0 # Delete when Eddy stats are fixed
 # For Eddy Merckx do range(1968, 1979)
 # 1903 - 2025
-for year in range(1973, 2025):
+for year in range(2009, 2025):
     print(f"Processing year: {year}")
     url = f"https://www.procyclingstats.com/race/tour-de-france/{year}/gc"
     try:

@@ -59,6 +59,14 @@ def scrape_1stcycling(year,stage,pts,pct_stage):
     table = pd.read_html(io.StringIO(response[start:end]))[0]
     try:
         table = table.drop(["Unnamed: 2","Team"], axis=1)
+        if "Unnamed: 5" in table.columns:
+            table = table.drop(["Unnamed: 5"], axis=1)
+        if "Unnamed: 1" in table.columns:
+            table = table.drop(["Unnamed: 1"], axis=1)
+        if "Unnamed: 3" in table.columns:
+            table = table.drop(["Unnamed: 3"], axis=1)
+        if "UCI" in table.columns:
+            table = table.drop(["UCI"], axis=1)
     except:
         return scrape_1stcycling(year,stage+1,pts,pct_stage)
     table.loc[0, "Time"] = "0"

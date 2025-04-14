@@ -56,5 +56,61 @@
 1985 stage 4 - 172 and 80
 1985 stage 6 - Enter
 1985 stage 7 - 105 and 35
-1985 stage 14 - 47 and 240, 48 and 240, 42 and 213, 24 and 213, 19 and 158, 20 and 158 (check again)
-CONTINUE
+1985 stage 14 - 47 and 240, 48 and 240, 42 and 213, 24 and 213, 19 and 158, 20 and 158
+1987 stage 7 - 196 and 712
+1987 stage 8 - 196 and 930
+1987 stage 12 - 188 and 203
+1988 stage 13 - Enter
+1988 stage 19 - Enter
+1988 stage 21 - Enter
+1989 stage 11 - 164 and 79
+1990 stage 7 - Enter
+1991 stage 5 - Enter
+1993 stage 7 - Enter
+1993 stage 11 - 98 and 1773, 99 and 1773
+1994 stage 1 - Enter
+1995 stage 1 - Enter
+1995 stage 15 - Enter
+1996 stage 1 - Enter
+1996 stage 7 - Enter
+1996 stage 15 - Enter
+1996 stage 16 - Enter
+1997 stage 1 - Enter
+1997 stage 3 - Enter
+1997 stage 4 - Enter
+1997 stage 5 - Enter
+1997 stage 6 - Enter
+1997 stage 7 - Enter
+1997 stage 8 - Enter
+1997 stage 9 - Enter
+1997 stage 10 - Enter
+1997 stage 11 - Enter
+1997 stage 12 - Enter
+1997 stage 19 - 9 and 26, 10 and 26
+1998 stage 3 - Enter
+1998 stage 4 - Enter
+1998 stage 10 - Enter
+1998 stage 13 - Enter
+2000 stage 7 - Enter
+2001 stage 2 - Enter
+2001 stage 3 - Enter
+2001 stage 4 - Enter
+2002 stage 1 - Enter
+2002 stage 5 - Enter
+2002 stage 7 - Enter
+2002 stage 8 - Enter
+2002 stage 9 - Enter
+2002 stage 11 - Enter
+2003 stage 7 - Enter
+2003 stage 12 - Enter
+2003 stage 12 - Enter
+2004 stage 6 - from 142 to 178 value 90, 115 and 0
+2005 stage 6 - 129 and 132, 127 and 132, 121 and 7, 139 and 237, 133 and 147
+2005 stage 21 - Enter
+2006 stage 3 - 136 and 235
+2006 stage 9 - 158 and 105, 159 an 105
+2006 stage 18 - 139 and 580
+2006 stage 20 - Enter
+2008 stage 20 - Enter
+2008 stage 21 - 138 and 64, 139 and 64
+2009 stage 12 - CONTINUE
