@@ -1,0 +1,68 @@
+\begin{thebibliography}{11}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[{\v S}ubelj(2018)]{Sub18a}
+Lovro {\v S}ubelj.
+\newblock Convex skeletons of complex networks.
+\newblock \emph{J. R. Soc. Interface}, 15\penalty0 (145):\penalty0 20180422,
+  2018.
+
+\bibitem[Kleinberg(2000)]{Kle00}
+Jon~M. Kleinberg.
+\newblock Navigation in a small world.
+\newblock \emph{Nature}, 406\penalty0 (6798):\penalty0 845, 2000.
+
+\bibitem[Bourne(2005)]{Bou05}
+Philip~E. Bourne.
+\newblock Ten simple rules for getting published.
+\newblock \emph{PLoS Comput. Biol.}, 1\penalty0 (5):\penalty0 e57, 2005.
+
+\bibitem[Erren and Bourne(2007)]{EB07}
+Thomas~C. Erren and Philip~E. Bourne.
+\newblock Ten simple rules for a good poster presentation.
+\newblock \emph{PLoS Comput. Biol.}, 3\penalty0 (5):\penalty0 e102, 2007.
+
+\bibitem[Newman(2008)]{New08}
+Mark E.~J. Newman.
+\newblock The physics of networks.
+\newblock \emph{Phys. Today}, 61\penalty0 (11):\penalty0 33--38, 2008.
+
+\bibitem[Fortunato(2010)]{For10}
+Santo Fortunato.
+\newblock Community detection in graphs.
+\newblock \emph{Phys. Rep.}, 486\penalty0 (3-5):\penalty0 75--174, 2010.
+
+\bibitem[Newman(2012)]{New12}
+M.~E.~J. Newman.
+\newblock Communities, modules and large-scale structure in networks.
+\newblock \emph{Nat. Phys.}, 8\penalty0 (1):\penalty0 25--31, 2012.
+
+\bibitem[Fortunato and Hric(2016)]{FH16}
+Santo Fortunato and Darko Hric.
+\newblock Community detection in networks: {A} user guide.
+\newblock \emph{Phys. Rep.}, 659:\penalty0 1--44, 2016.
+
+\bibitem[Peel et~al.(2017)Peel, Larremore, and Clauset]{PLC17}
+Leto Peel, Daniel~B. Larremore, and Aaron Clauset.
+\newblock The ground truth about metadata and community detection in networks.
+\newblock \emph{Sci. Adv.}, 3\penalty0 (5):\penalty0 e1602548, 2017.
+
+\bibitem[Peel et~al.(2018)Peel, Delvenne, and Lambiotte]{PDL18}
+Leto Peel, Jean-Charles Delvenne, and Renaud Lambiotte.
+\newblock Multiscale mixing patterns in networks.
+\newblock \emph{P. Natl. Acad. Sci. USA}, 115\penalty0 (16):\penalty0
+  4057--4062, 2018.
+
+\bibitem[Peixoto(2020)]{Pei20}
+Tiago~P. Peixoto.
+\newblock Bayesian stochastic blockmodeling.
+\newblock In Patrick Doreian, Vladimir Batagelj, and Anu{\v s}ka Ferligoj,
+  editors, \emph{Advances in {Network} {Clustering} and {Blockmodeling}},
+  Computational and {Quantitative} {Social} {Science}, pages 281--324. Wiley,
+  New York, 1st edition, 2020.
+
+\end{thebibliography}

@@ -5,32 +5,16 @@ import numpy as np
 import io
 import os
 import networkx as nx
-import helper
+from helper import not_restday, time_to_seconds, guess_stage_type_and_length, scaling_factor, create_stats_file
 
 pd.set_option('display.max_rows', None)      # Show all rows
 
-# GC - overall winner (Yellow Jersey), POINTS - points classification (Green Jersey), KOM - King of the Mountains (Polka Dot Jersey), YOUTH - best young rider (White Jersey)
 columns = ["Rider", "1st", "2nd", "3rd", "GC", "POINTS", "KOM", "YOUTH"]
 stats_df = pd.DataFrame(columns=columns)
 
-# ------------------------ Helpers ------------------------
-def time_to_seconds(time_str):
-    parts = time_str.split(":")
-    if len(parts) == 3:
-        hours, minutes, seconds = map(int, parts)
-    elif len(parts) == 2:
-        hours, minutes, seconds = 0, *map(int, parts)
-    elif time_str == "-":
-        return None
-    else:
-        parts2 = time_str.split(".")
-        if len(parts2) == 1:
-            return time_str
-        hours, minutes, seconds = 0, *map(int, parts2)
-    return hours * 3600 + minutes * 60 + seconds
+# GC - overall winner (Yellow Jersey), POINTS - points classification (Green Jersey), KOM - King of the Mountains (Polka Dot Jersey), YOUTH - best young rider (White Jersey)
 
-def create_stats_file(sorted_stats):
-    sorted_stats.to_csv("tdf_stats.csv", index=False, header=True, sep=";")
+# ----------------------- Statistics -------------------------
 
 def add_new_rider(rider):
     global stats_df
@@ -68,97 +52,57 @@ def get_overall_winner_of_category(response, category, number_of_categorie):
         add_new_rider(winner)
     stats_df.loc[stats_df["Rider"] == winner, category] += 1
 
-def guess_stage_type_and_length(stage_title):
-    #CHATGPT nepreverjeno
-    title = stage_title.lower()
-    if "itt" in title or "individual time trial" in title:
-        return "itt", 25
-    elif "ttt" in title or "team time trial" in title:
-        return "ttt", 30
-    elif "mountain" in title:
-        return "mountain", 180
-    elif "hill" in title or "hilly" in title:
-        return "hilly", 160
-    elif "flat" in title:
-        return "flat", 200
-    else:
-        return "unknown", 160 
-
-def scaling_factor(stage_type, length_km):
-    base = {
-        "itt": 1.5,
-        "ttt": 1.2,
-        "mountain": 2.0,
-        "hilly": 1.4,
-        "flat": 1.0,
-        "unknown": 1.0
-    }
-    return base.get(stage_type, 1.0) * (length_km / 100)
-
 # ----------------------- Main -------------------------
 
 # Graphs modes
 graph_modes = ["no_weights", "time_diff", "normalized_time_diff", "scaled_time_diff", "points", "pure_points"]
 graphs = {mode: nx.MultiDiGraph() for mode in graph_modes}
 
-edition = "a" # TODO: Add edition = "c", debug properly. ALSO include Prologue stages
-eddy = 0 # Delete when Eddy stats are fixed
-# For Eddy Merckx do range(1968, 1979)
-# 1903 - 2025
-for year in range(2009, 2025):
+for year in range(1903, 2025):
     print(f"Processing year: {year}")
-    url = f"https://www.procyclingstats.com/race/tour-de-france/{year}/gc"
+    url = f"https://www.procyclingstats.com/race/tour-de-france/{year}"
     try:
-        response = BeautifulSoup(requests.get(url).content, 'html.parser').prettify()
+        response = str(requests.get(url).content)
+        stages = response.find("<h3>Stages</h3>") + 17
+        response = response[stages:]
+        end_table = response.find("</table>")
+        response = response[:end_table]
+        html = BeautifulSoup(response, 'html.parser').prettify()
+        table = pd.read_html(io.StringIO(response))[0]
+        response = response = BeautifulSoup(requests.get(url+"/gc").content, 'html.parser').prettify()
     except:
         print(f"Skipped year {year}")
         continue
 
     extended_stage = 0
-    no_stages = response.find("Stage ")
-    no_stages = response[no_stages+5 : no_stages+8]
-    try:
-        no_stages = int(no_stages)
-    except:
-        print(f"Skipped year {year}")
-        continue
+    stages = table["Stage"].array
+    stages = ["stage-"+stage.split()[1] for stage in stages if not_restday(stage)]
+    if stages[0] == "stage-|":
+        stages[0] = "prologue"
+        extended_stage = -1
 
     categories = get_categories_for_year(year)
     for category, index in categories.items():
         get_overall_winner_of_category(response, category, index)
 
-    for stage in range(1, no_stages+1):
+    for stage in stages:
         extended_stage += 1
         if stage == 20 and year == 1979:
             continue
-        true_stage = stage
-        stage_url = f"https://www.procyclingstats.com/race/tour-de-france/{year}/stage-{stage}"
+        stage_url = f"https://www.procyclingstats.com/race/tour-de-france/{year}/{stage}"
         try:
             response = BeautifulSoup(requests.get(stage_url).content, 'html.parser')
             html = response.prettify()
             table = pd.read_html(io.StringIO(html))[0]
         except:
-            try:
-                # TODO: Add edition = "c", debug properly. ALSO include Prologue stages
-                response = BeautifulSoup(requests.get(stage_url + edition).content, 'html.parser')
-                html = response.prettify()
-                table = pd.read_html(io.StringIO(html))[0]
-                if edition == "a":
-                    stage -= 1
-                    edition = "b"
-                    true_stage = f"{true_stage}a"
-                else:
-                    edition = "a"
-                    true_stage = f"{true_stage}b"
-            except:
-                print(f"    Failed to load stage {true_stage}")
-                continue
+            print(f"    Failed to load stage {stage}")
+            continue
 
         columns_to_keep = ["Rnk", "Rider", "Team", "Pnt", "Time"]
         try:
             table = table[columns_to_keep]
         except:
-            print(f"    Skipping team stage at {year} stage {true_stage}")
+            print(f"    Skipping team stage at {year} {stage}")
             continue
 
         table = table.dropna(subset=["Rnk"])
@@ -177,15 +121,12 @@ for year in range(2009, 2025):
         table = table.reset_index(drop=True)
         
         table["Time"] = pd.to_numeric(table["Time"], errors="coerce")
+        
         while not table["Time"].is_monotonic_increasing:
-            table = helper.scrape_1stcycling(year,extended_stage,table[["Rider","Pnt","Time"]],true_stage)
-            if type(table) == None:
-                print(f"    Skipping {year} stage {true_stage} because not monotonic increasing time")
-                break
-
-        if "MERCKX Eddy" in table.loc[0,"Rider"]: # TODO: Delete when fixed, needs 34 wins.
-            eddy += 1
-            print(f"Eddy Merckx at {year} - {true_stage} win #{eddy}")
+            table = table[["Rider","Pnt","Time"]]
+            for i in range(len(table) - 2, -1, -1):
+                if table.loc[i, "Time"] > table.loc[i + 1, "Time"]:
+                    table.loc[i, "Time"] = table.loc[i + 1, "Time"]
 
         if len(table) >= 3:
             add_podiums(table)
@@ -228,7 +169,7 @@ for year in range(2009, 2025):
                     elif mode == "pure_points": # TODO: Should have much less edges, check it. 
                         weight = points
                     graphs[mode].add_edge(current_rider, prev_rider, weight=weight)
-                    
+
 
 # ---------------------- Output --------------------------
 os.makedirs("output_graphs", exist_ok=True)
