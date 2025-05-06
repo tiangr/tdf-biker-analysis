@@ -9,22 +9,23 @@ from helper import not_restday, time_to_seconds, guess_stage_type_and_length, sc
 
 pd.set_option('display.max_rows', None)      # Show all rows
 
-columns = ["Rider", "1st", "2nd", "3rd", "GC", "POINTS", "KOM", "YOUTH"]
+columns = ["Rider", "1st", "2nd", "3rd", "4th", "5th", "GC", "POINTS", "KOM", "YOUTH"]
 stats_df = pd.DataFrame(columns=columns)
 
 # GC - overall winner (Yellow Jersey), POINTS - points classification (Green Jersey), KOM - King of the Mountains (Polka Dot Jersey), YOUTH - best young rider (White Jersey)
+log_file = open("output.txt", "w", encoding="utf-8")
 
 # ----------------------- Statistics -------------------------
 
 def add_new_rider(rider):
     global stats_df
-    new_row = pd.DataFrame({"Rider": [rider], "1st": [0], "2nd": [0], "3rd": [0], "GC": [0], "POINTS": [0], "KOM": [0], "YOUTH": [0]})
+    new_row = pd.DataFrame({"Rider": [rider], "1st": [0], "2nd": [0], "3rd": [0], "4th": [0], "5th": [0], "GC": [0], "POINTS": [0], "KOM": [0], "YOUTH": [0]})
     stats_df = pd.concat([stats_df, new_row], ignore_index=True)
 
 def add_podiums(table):
     global stats_df
-    for i in range(3):
-        rider = table.loc[i, "Rider"]
+    for i in range(5):
+        rider = table.loc[i, "Rider"].rstrip()
         if rider not in stats_df["Rider"].values:
             add_new_rider(rider)
         stats_df.loc[stats_df["Rider"] == rider, columns[i+1]] += 1
@@ -46,6 +47,7 @@ def get_overall_winner_of_category(response, category, number_of_categorie):
     try:
         winner = pd.read_html(io.StringIO(response))[number_of_categorie]
         winner = winner.loc[0, "Rider"].replace(f" {winner.loc[0, 'Team']}", "")
+        winner = winner.rstrip()
     except:
         return
     if winner not in stats_df["Rider"].values:
@@ -128,7 +130,7 @@ for year in range(1903, 2025):
                 if table.loc[i, "Time"] > table.loc[i + 1, "Time"]:
                     table.loc[i, "Time"] = table.loc[i + 1, "Time"]
 
-        if len(table) >= 3:
+        if len(table) >= 5:
             add_podiums(table)
 
         loser_time = int(table.loc[len(table)-1, "Time"])
