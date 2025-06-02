@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex report"] 1746461037.30128 "report.aux" "report.bbl" "report" 1746461054.16132 0
+["bibtex report"] 1748904841.95353 "report.aux" "report.bbl" "report" 1748905288.68976 0
   "./bibliography.bib" 1746384892 4329685 08b98b1a37b54bfdcea6632af5b527bc ""
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/bibtex/bst/natbib/unsrtnat.bst" 1284455456 24550 a41a6405f4de768c43e871d9fbce2bc8 ""
-  "report.aux" 1746461053 2668 39fb46a82a99cc50d5167c27691a5442 "pdflatex"
+  "report.aux" 1748905287 2759 09ec98b31edf51aa8d2802a29f8fce6f "pdflatex"
   (generated)
   "report.bbl"
   "report.blg"
   (rewritten before read)
-["pdflatex"] 1746461051.49715 "c:/Users/Martin/Documents/tdf-biker-analysis/report/report.tex" "report.pdf" "report" 1746461054.1624 0
+["pdflatex"] 1748905285.8916 "c:/Users/Martin/Documents/tdf-biker-analysis/report/report.tex" "report.pdf" "report" 1748905288.69086 0
   "C:/Users/Martin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1746460443 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/Martin/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1746460239 13158165 d1160c62d07eebd9cf0991483c2f7307 ""
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -272,7 +272,7 @@
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/tex/latex/xifthen/xifthen.sty" 1448274436 5689 1bfa68243e89a54479e7d0580773c57e ""
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1695383086 2269 4fe6fb3396214c91f164d45faf9bec45 ""
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1695383086 20785 f7d1133a287929598a897c93f8f4c44b ""
-  "c:/Users/Martin/Documents/tdf-biker-analysis/report/report.tex" 1746461050 5321 16da062ae1aace304510acec351541d8 ""
+  "c:/Users/Martin/Documents/tdf-biker-analysis/report/report.tex" 1748905284 8540 c9e60243891fe21e581a1e445cd9205b ""
   "distributions.pdf" 1746460204 177740 e9511ffb9435ecaac4ae6f1dbbf07a87 ""
   "example1.pdf" 1746460204 105221 b7b7db8206b670717504b1014ad971e9 ""
   "example2.pdf" 1746460204 82248 ff697218025658daaf8296cf4514327b ""
@@ -280,10 +280,10 @@
   "growth.pdf" 1746460204 57601 0a10febd2deaa82acc0288a76787a9bb ""
   "pnas-report.cls" 1746385165 14628 fc22ff36227dbdc499341685e932671a ""
   "pnasresearcharticle.sty" 1746385162 1275 7aec1205c12893a1c87d36790c959b86 ""
-  "report.aux" 1746461053 2668 39fb46a82a99cc50d5167c27691a5442 "pdflatex"
-  "report.bbl" 1746461037 2646 eadbfbaf868920e9aae2fb3994931e54 "bibtex report"
-  "report.out" 1746461052 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "report.tex" 1746461050 5321 16da062ae1aace304510acec351541d8 ""
+  "report.aux" 1748905287 2759 09ec98b31edf51aa8d2802a29f8fce6f "pdflatex"
+  "report.bbl" 1748904842 2646 eadbfbaf868920e9aae2fb3994931e54 "bibtex report"
+  "report.out" 1748905287 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "report.tex" 1748905284 8540 c9e60243891fe21e581a1e445cd9205b ""
   "results1.pdf" 1746460203 9200 c599396b63a4cbcbb0f021cbdd2eb904 ""
   "results2.pdf" 1746460204 10071 d42912008757db537c45b39ef6090800 ""
   (generated)
