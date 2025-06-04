@@ -451,6 +451,7 @@ INPUT .\growth.pdf
 INPUT .\growth.pdf
 INPUT .\growth.pdf
 INPUT C:\Users\Martin\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvb8t.tfm
+INPUT C:\Users\Martin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmbx7.tfm
 INPUT C:\Users\Martin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr10.tfm
 INPUT C:\Users\Martin\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvr8t.tfm
 INPUT C:\Users\Martin\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvb8t.tfm
@@ -467,8 +468,6 @@ INPUT C:\Users\Martin\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvb
 INPUT C:\Users\Martin\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvb8r.tfm
 INPUT C:\Users\Martin\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvb8t.vf
 INPUT C:\Users\Martin\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvb8r.tfm
-INPUT C:\Users\Martin\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathsy.enc
-INPUT C:\Users\Martin\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-rm.enc
 INPUT C:\Users\Martin\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvr8t.vf
 INPUT C:\Users\Martin\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvr8r.tfm
 INPUT C:\Users\Martin\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvr8t.vf
@@ -517,8 +516,10 @@ INPUT .\results2.pdf
 INPUT .\results2.pdf
 INPUT C:\Users\Martin\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvro8t.tfm
 INPUT C:\Users\Martin\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathit.enc
+INPUT C:\Users\Martin\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathsy.enc
 INPUT C:\Users\Martin\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvr8t.vf
 INPUT C:\Users\Martin\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvr8r.tfm
+INPUT C:\Users\Martin\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-rm.enc
 INPUT C:\Users\Martin\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvro8t.vf
 INPUT C:\Users\Martin\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvro8r.tfm
 INPUT C:\Users\Martin\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmr8.tfm
@@ -549,6 +550,8 @@ INPUT C:\Users\Martin\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\
 INPUT C:\Users\Martin\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmssi10.pfb
 INPUT C:\Users\Martin\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmssi12.pfb
 INPUT C:\Users\Martin\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmssi12.pfb
+INPUT C:\Users\Martin\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx7.pfb
+INPUT C:\Users\Martin\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx7.pfb
 INPUT C:\Users\Martin\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx8.pfb
 INPUT C:\Users\Martin\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx8.pfb
 INPUT C:\Users\Martin\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx9.pfb

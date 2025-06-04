@@ -1,68 +1,92 @@
-\begin{thebibliography}{11}
+\begin{thebibliography}{13}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[{\v S}ubelj(2018)]{Sub18a}
-Lovro {\v S}ubelj.
-\newblock Convex skeletons of complex networks.
-\newblock \emph{J. R. Soc. Interface}, 15\penalty0 (145):\penalty0 20180422,
-  2018.
+\bibitem[Page et~al.(1999)Page, Brin, Motwani, and Winograd]{Page1999}
+Lawrence Page, Sergey Brin, Rajeev Motwani, and Terry Winograd.
+\newblock The pagerank citation ranking: Bringing order to the web.
+\newblock Technical Report 1999-66, Stanford InfoLab, 1999.
+\newblock URL \url{http://ilpubs.stanford.edu:8090/422/}.
+\newblock Previous number: SIDL-WP-1999-0120.
 
-\bibitem[Kleinberg(2000)]{Kle00}
-Jon~M. Kleinberg.
-\newblock Navigation in a small world.
-\newblock \emph{Nature}, 406\penalty0 (6798):\penalty0 845, 2000.
+\bibitem[Traag et~al.(2019)Traag, Waltman, and van Eck]{Traag2019}
+Vincent~A. Traag, Ludo Waltman, and Nees~Jan van Eck.
+\newblock From louvain to leiden: guaranteeing well-connected communities.
+\newblock \emph{Scientific Reports}, 9\penalty0 (1):\penalty0 5233, 2019.
+\newblock \doi{10.1038/s41598-019-41695-z}.
 
-\bibitem[Bourne(2005)]{Bou05}
-Philip~E. Bourne.
-\newblock Ten simple rules for getting published.
-\newblock \emph{PLoS Comput. Biol.}, 1\penalty0 (5):\penalty0 e57, 2005.
+\bibitem[Fruchterman and Reingold(1991)]{Fruchterman1991}
+Thomas M.~J. Fruchterman and Edward~M. Reingold.
+\newblock Graph drawing by force‐directed placement.
+\newblock \emph{Software: Practice and Experience}, 21\penalty0 (11):\penalty0
+  1129--1164, 1991.
+\newblock \doi{10.1002/spe.4380211102}.
 
-\bibitem[Erren and Bourne(2007)]{EB07}
-Thomas~C. Erren and Philip~E. Bourne.
-\newblock Ten simple rules for a good poster presentation.
-\newblock \emph{PLoS Comput. Biol.}, 3\penalty0 (5):\penalty0 e102, 2007.
+\bibitem[Bi et~al.(2024)Bi, Sun, and Hu]{Bi2024-me}
+Xiangyang Bi, Zhanning Sun, and Boran Hu.
+\newblock The network of sports: using network analysis to understand the
+  relationship between sports and socio-physiological factors in contemporary
+  china.
+\newblock \emph{Appl. Netw. Sci.}, 9\penalty0 (1), June 2024.
 
-\bibitem[Newman(2008)]{New08}
-Mark E.~J. Newman.
-\newblock The physics of networks.
-\newblock \emph{Phys. Today}, 61\penalty0 (11):\penalty0 33--38, 2008.
+\bibitem[Pe{\~n}a and Touchette(2012)]{Pena2012-sr}
+Javier~L{\'o}pez Pe{\~n}a and Hugo Touchette.
+\newblock A network theory analysis of football strategies.
+\newblock \emph{arXiv [math.CO]}, 2012.
 
-\bibitem[Fortunato(2010)]{For10}
-Santo Fortunato.
-\newblock Community detection in graphs.
-\newblock \emph{Phys. Rep.}, 486\penalty0 (3-5):\penalty0 75--174, 2010.
+\bibitem[Fewell et~al.(2012)Fewell, Armbruster, Ingraham, Petersen, and
+  Waters]{Fewell2012-ha}
+Jennifer~H Fewell, Dieter Armbruster, John Ingraham, Alexander Petersen, and
+  James~S Waters.
+\newblock Basketball teams as strategic networks.
+\newblock \emph{PLoS One}, 7\penalty0 (11):\penalty0 e47445, November 2012.
 
-\bibitem[Newman(2012)]{New12}
-M.~E.~J. Newman.
-\newblock Communities, modules and large-scale structure in networks.
-\newblock \emph{Nat. Phys.}, 8\penalty0 (1):\penalty0 25--31, 2012.
+\bibitem[Matthews et~al.(2021)Matthews, McClain, Smith, and
+  Tennant]{Matthews2021-uu}
+Nicole~R Matthews, Andrew McClain, Chase M~L Smith, and Adam~G Tennant.
+\newblock Application of {PageRank} algorithm to division {I} {NCAA} men's
+  basketball as bracket formation and outcome predictive utility.
+\newblock \emph{J. Sports Anal.}, 7\penalty0 (1):\penalty0 1--9, April 2021.
 
-\bibitem[Fortunato and Hric(2016)]{FH16}
-Santo Fortunato and Darko Hric.
-\newblock Community detection in networks: {A} user guide.
-\newblock \emph{Phys. Rep.}, 659:\penalty0 1--44, 2016.
+\bibitem[Mukherjee(2012)]{Mukherjee2012-zt}
+Satyam Mukherjee.
+\newblock Complex network analysis in cricket : Community structure, player's
+  role and performance index.
+\newblock 2012.
 
-\bibitem[Peel et~al.(2017)Peel, Larremore, and Clauset]{PLC17}
-Leto Peel, Daniel~B. Larremore, and Aaron Clauset.
-\newblock The ground truth about metadata and community detection in networks.
-\newblock \emph{Sci. Adv.}, 3\penalty0 (5):\penalty0 e1602548, 2017.
+\bibitem[Shi and Tian(2020)]{Shi2020-wb}
+Jian Shi and Xin-Yu Tian.
+\newblock Learning to rank sports teams on a graph.
+\newblock \emph{Appl. Sci. (Basel)}, 10\penalty0 (17):\penalty0 5833, August
+  2020.
 
-\bibitem[Peel et~al.(2018)Peel, Delvenne, and Lambiotte]{PDL18}
-Leto Peel, Jean-Charles Delvenne, and Renaud Lambiotte.
-\newblock Multiscale mixing patterns in networks.
-\newblock \emph{P. Natl. Acad. Sci. USA}, 115\penalty0 (16):\penalty0
-  4057--4062, 2018.
+\bibitem[Radicchi(2011)]{Radicchi2011-nk}
+Filippo Radicchi.
+\newblock Who is the best player ever? a complex network analysis of the
+  history of professional tennis.
+\newblock \emph{arXiv [physics.soc-ph]}, 2011.
 
-\bibitem[Peixoto(2020)]{Pei20}
-Tiago~P. Peixoto.
-\newblock Bayesian stochastic blockmodeling.
-\newblock In Patrick Doreian, Vladimir Batagelj, and Anu{\v s}ka Ferligoj,
-  editors, \emph{Advances in {Network} {Clustering} and {Blockmodeling}},
-  Computational and {Quantitative} {Social} {Science}, pages 281--324. Wiley,
-  New York, 1st edition, 2020.
+\bibitem[Horvat et~al.(2023)Horvat, Sovinc, and Grzin]{Horvat2023-fu}
+Matej Horvat, Lan Sovinc, and Domen Grzin.
+\newblock Identifying communities and ranking the drivers' performance in
+  formula one.
+\newblock In \emph{Proceedings of the 9th Student Computing Research
+  Symposium}. University of Primorska Press, October 2023.
+
+\bibitem[Kholkine et~al.(2021)Kholkine, Servotte, de~Leeuw, De~Schepper,
+  Hellinckx, Verdonck, and Latr{\'e}]{Kholkine2021-ky}
+Leonid Kholkine, Thomas Servotte, Arie-Willem de~Leeuw, Tom De~Schepper, Peter
+  Hellinckx, Tim Verdonck, and Steven Latr{\'e}.
+\newblock A {Learn-to-Rank} approach for predicting road cycling race outcomes.
+\newblock \emph{Front. Sports Act. Living}, 3:\penalty0 714107, October 2021.
+
+\bibitem[Janssens et~al.(2023)Janssens, Bogaert, and Maton]{Janssens2023-ke}
+Bram Janssens, Matthias Bogaert, and Mathijs Maton.
+\newblock Predicting the next poga{\v c}ar: a data analytical approach to
+  detect young professional cycling talents.
+\newblock \emph{Ann. Oper. Res.}, 325\penalty0 (1):\penalty0 557--588, 2023.
 
 \end{thebibliography}

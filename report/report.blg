@@ -5,50 +5,47 @@ Reallocating 'name_of_file' (item size: 1) to 9 items.
 The style file: unsrtnat.bst
 Reallocating 'name_of_file' (item size: 1) to 13 items.
 Database file #1: bibliography.bib
-Warning--I didn't find a database entry for "Fewell"
-Warning--I didn't find a database entry for "Pena"
-Warning--I didn't find a database entry for "Swanson"
-Warning--I didn't find a database entry for "Matthews"
-Warning--I didn't find a database entry for "Horvat"
-You've used 11 entries,
+Warning--I didn't find a database entry for "Sub18a"
+Warning--empty journal in Mukherjee2012-zt
+You've used 13 entries,
             2481 wiz_defined-function locations,
-            653 strings with 5776 characters,
-and the built_in function-call counts, 4096 in all, are:
-= -- 371
-> -- 132
-< -- 10
-+ -- 59
-- -- 37
-* -- 301
-:= -- 636
-add.period$ -- 34
-call.type$ -- 11
-change.case$ -- 23
-chr.to.int$ -- 11
-cite$ -- 11
-duplicate$ -- 222
-empty$ -- 417
-format.name$ -- 52
-if$ -- 880
+            651 strings with 7133 characters,
+and the built_in function-call counts, 4810 in all, are:
+= -- 386
+> -- 275
+< -- 6
++ -- 106
+- -- 80
+* -- 397
+:= -- 803
+add.period$ -- 44
+call.type$ -- 13
+change.case$ -- 26
+chr.to.int$ -- 13
+cite$ -- 14
+duplicate$ -- 242
+empty$ -- 428
+format.name$ -- 99
+if$ -- 995
 int.to.chr$ -- 1
-int.to.str$ -- 12
-missing$ -- 11
-newline$ -- 63
-num.names$ -- 35
-pop$ -- 78
+int.to.str$ -- 14
+missing$ -- 12
+newline$ -- 77
+num.names$ -- 39
+pop$ -- 99
 preamble$ -- 1
-purify$ -- 11
+purify$ -- 13
 quote$ -- 0
-skip$ -- 134
+skip$ -- 131
 stack$ -- 0
-substring$ -- 239
-swap$ -- 31
+substring$ -- 155
+swap$ -- 32
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 77
-warning$ -- 0
-while$ -- 41
+type$ -- 91
+warning$ -- 1
+while$ -- 36
 width$ -- 0
-write$ -- 154
-(There were 5 warnings)
+write$ -- 180
+(There were 2 warnings)
