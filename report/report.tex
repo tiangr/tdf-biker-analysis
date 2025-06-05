@@ -7,7 +7,7 @@
 \title{Identifying the Greatest Tour de France Riders Through Network Science}
 \author[a,2]{Martin Starič}
 \author[a,1]{Matic Stare}
-\author[a,b]{Jan } 
+\author[a]{Jan Topolovec} 
 \author[b]{Tian }
 
 \affil[a]{University of Ljubljana, Faculty of Computer and Information Science, Ve\v{c}na pot 113, SI-1000 Ljubljana, Slovenia}
@@ -134,10 +134,31 @@ but none of those studies use network analysis approaches.
 	\label{fig:example}
 \end{figure}
 
+
 \section*{Discussion}
 
 {\bf Summary of results, main contributions, final conclusions, future work etc.}
-\lipsum[1-3]
+
+This project presents a network-based analysis of Tour de France rider performance from 1903 to 2024. We constructed six different networks of riders using a range of edge-weighting strategies (time-based, point-based, and unweighted). With this, we tried to get different aspects of rider dominance and consistency across the races and tours. We used the PageRank algorithm to identify best-performing riders and not just overall winners. The Fruchterman-Reingold layout provided a visualisation of the rider's performance over time.
+
+
+
+Each of our six networks provided a unique look at the riders:
+\begin{itemize}
+    \item \textbf{Scale Time Difference:} Find's dominance in flat stages where gaps are minimal
+    \item \textbf{Pure Points:} Identifies the stage winners or consistent high-place
+    \item \textbf{Points:} Identifies the riders with more races
+    \item \textbf{Unweighted:} Identifies consistent stage winner (general classification results)
+    \item \textbf{Time Difference:} Identifies riders with large winning margins (even in fewer races)
+    \item \textbf{Normalized Time Difference:} Improve fairness compared to Time Difference, since it normalizes stage length
+\end{itemize}
+
+This work analyses the history of Tour de France results, offering a broad view of rider performance across different eras. We introduced a new method for comparing riders using stage times and rankings. The use of multiple edge-weighting strategies provided a more deeper understanding of rider strengths. PageRank helped rank riders beyond just stage wins, while the Leiden algorithm revealed generational structures and clusters.
+
+The general classification standings we used to create networks don't provide the whole view. By using diverse performance metrics and network modelling, we got patterns missing in more traditional rankings. With this, we can not only find the best riders by winning tours, but also by consistence performance and other metrics. Network analysis offers a more complex framework for the evaluation of successful professional riders in Tour de France.
+
+In the future, we could explore temporal networks to track careers and performance. A deeper analysis could also reveal the best rider for specific stage types like time trials or summit finishes. To achieve this we could only look at important stages for each type. Additionally, we could use some interactive visualization tools to allow better insight into different rankings. Finally, applying this methodology to other Grand Tours like the Giro d’Italia or Vuelta a España  could offer valuable comparative insights.
+
 
 {\small
 
