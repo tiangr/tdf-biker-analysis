@@ -5,26 +5,6 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Page et~al.(1999)Page, Brin, Motwani, and Winograd]{Page1999}
-Lawrence Page, Sergey Brin, Rajeev Motwani, and Terry Winograd.
-\newblock The pagerank citation ranking: Bringing order to the web.
-\newblock Technical Report 1999-66, Stanford InfoLab, 1999.
-\newblock URL \url{http://ilpubs.stanford.edu:8090/422/}.
-\newblock Previous number: SIDL-WP-1999-0120.
-
-\bibitem[Traag et~al.(2019)Traag, Waltman, and van Eck]{Traag2019}
-Vincent~A. Traag, Ludo Waltman, and Nees~Jan van Eck.
-\newblock From louvain to leiden: guaranteeing well-connected communities.
-\newblock \emph{Scientific Reports}, 9\penalty0 (1):\penalty0 5233, 2019.
-\newblock \doi{10.1038/s41598-019-41695-z}.
-
-\bibitem[Fruchterman and Reingold(1991)]{Fruchterman1991}
-Thomas M.~J. Fruchterman and Edward~M. Reingold.
-\newblock Graph drawing by force‐directed placement.
-\newblock \emph{Software: Practice and Experience}, 21\penalty0 (11):\penalty0
-  1129--1164, 1991.
-\newblock \doi{10.1002/spe.4380211102}.
-
 \bibitem[Bi et~al.(2024)Bi, Sun, and Hu]{Bi2024-me}
 Xiangyang Bi, Zhanning Sun, and Boran Hu.
 \newblock The network of sports: using network analysis to understand the
@@ -44,6 +24,13 @@ Jennifer~H Fewell, Dieter Armbruster, John Ingraham, Alexander Petersen, and
 \newblock Basketball teams as strategic networks.
 \newblock \emph{PLoS One}, 7\penalty0 (11):\penalty0 e47445, November 2012.
 
+\bibitem[Page et~al.(1999)Page, Brin, Motwani, and Winograd]{Page1999}
+Lawrence Page, Sergey Brin, Rajeev Motwani, and Terry Winograd.
+\newblock The pagerank citation ranking: Bringing order to the web.
+\newblock Technical Report 1999-66, Stanford InfoLab, 1999.
+\newblock URL \url{http://ilpubs.stanford.edu:8090/422/}.
+\newblock Previous number: SIDL-WP-1999-0120.
+
 \bibitem[Matthews et~al.(2021)Matthews, McClain, Smith, and
   Tennant]{Matthews2021-uu}
 Nicole~R Matthews, Andrew McClain, Chase M~L Smith, and Adam~G Tennant.
@@ -51,17 +38,17 @@ Nicole~R Matthews, Andrew McClain, Chase M~L Smith, and Adam~G Tennant.
   basketball as bracket formation and outcome predictive utility.
 \newblock \emph{J. Sports Anal.}, 7\penalty0 (1):\penalty0 1--9, April 2021.
 
-\bibitem[Mukherjee(2012)]{Mukherjee2012-zt}
-Satyam Mukherjee.
-\newblock Complex network analysis in cricket : Community structure, player's
-  role and performance index.
-\newblock 2012.
-
 \bibitem[Shi and Tian(2020)]{Shi2020-wb}
 Jian Shi and Xin-Yu Tian.
 \newblock Learning to rank sports teams on a graph.
 \newblock \emph{Appl. Sci. (Basel)}, 10\penalty0 (17):\penalty0 5833, August
   2020.
+
+\bibitem[Mukherjee(2012)]{Mukherjee2012-zt}
+Satyam Mukherjee.
+\newblock Complex network analysis in cricket : Community structure, player's
+  role and performance index.
+\newblock 2012.
 
 \bibitem[Radicchi(2011)]{Radicchi2011-nk}
 Filippo Radicchi.
@@ -88,5 +75,18 @@ Bram Janssens, Matthias Bogaert, and Mathijs Maton.
 \newblock Predicting the next poga{\v c}ar: a data analytical approach to
   detect young professional cycling talents.
 \newblock \emph{Ann. Oper. Res.}, 325\penalty0 (1):\penalty0 557--588, 2023.
+
+\bibitem[Fruchterman and Reingold(1991)]{Fruchterman1991}
+Thomas M.~J. Fruchterman and Edward~M. Reingold.
+\newblock Graph drawing by force‐directed placement.
+\newblock \emph{Software: Practice and Experience}, 21\penalty0 (11):\penalty0
+  1129--1164, 1991.
+\newblock \doi{10.1002/spe.4380211102}.
+
+\bibitem[Traag et~al.(2019)Traag, Waltman, and van Eck]{Traag2019}
+Vincent~A. Traag, Ludo Waltman, and Nees~Jan van Eck.
+\newblock From louvain to leiden: guaranteeing well-connected communities.
+\newblock \emph{Scientific Reports}, 9\penalty0 (1):\penalty0 5233, 2019.
+\newblock \doi{10.1038/s41598-019-41695-z}.
 
 \end{thebibliography}
