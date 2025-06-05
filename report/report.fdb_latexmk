@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex report"] 1749157591.0403 "report.aux" "report.bbl" "report" 1749158039.07591 0
+["bibtex report"] 1749158780.03064 "report.aux" "report.bbl" "report" 1749158822.60179 0
   "./bibliography.bib" 1749070769 18453 3e613532df6f7c906a38c8a41b7fb0fc ""
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/bibtex/bst/natbib/unsrtnat.bst" 1284455456 24550 a41a6405f4de768c43e871d9fbce2bc8 ""
-  "report.aux" 1749158038 2310 8a02a449cf19cbdbc9fdd2b8291ec58b "pdflatex"
+  "report.aux" 1749158821 2310 98f28f84b163b69dccd6f61e86b13b29 "pdflatex"
   (generated)
   "report.bbl"
   "report.blg"
   (rewritten before read)
-["pdflatex"] 1749158036.32717 "c:/Users/Martin/Documents/tdf-biker-analysis/report/report.tex" "report.pdf" "report" 1749158039.07695 0
+["pdflatex"] 1749158820.0476 "c:/Users/Martin/Documents/tdf-biker-analysis/report/report.tex" "report.pdf" "report" 1749158822.60288 0
   "C:/Users/Martin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1746460443 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/Martin/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1746460239 13158165 d1160c62d07eebd9cf0991483c2f7307 ""
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -27,7 +27,6 @@
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1233951854 940 228d6584342e91276bf566bcf9716b83 ""
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmr9.tfm" 1136765053 1292 6b21b9c2c7bebb38aa2273f7ca0fb3af ""
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/ec-lmbx7.tfm" 1256929440 12072 feea2d4511ce6b67cf0049876d122c6b ""
-  "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/ec-lmbx8.tfm" 1256929440 12076 360d279d01701e9e9f0f2427c1d230fe ""
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/ec-lmbx9.tfm" 1256929440 12080 8da3d5e88196e4de175949ad7749b42f ""
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/ec-lmcsc10.tfm" 1256929440 11276 116dd5bea6621ce4a1999f96d876084c ""
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/ec-lmr10.tfm" 1256929440 12056 7e13df7fe4cbce21b072ba7c4f4deb6e ""
@@ -35,7 +34,6 @@
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/ec-lmr5.tfm" 1256929440 12020 46464c854bf317de2a7a0bbe4a1160ca ""
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/ec-lmr6.tfm" 1256929440 12048 c1068d0f4772be9b0ec447692e1d6d82 ""
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/ec-lmr7.tfm" 1256929440 12064 09aa3eeac96bf141d673bb1b0385ce55 ""
-  "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/ec-lmr8.tfm" 1256929440 12064 9b9ade9f64cb32ce1d9a88d21fbd5c2d ""
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/ec-lmr9.tfm" 1256929440 12084 b7f5e4c003de6f57f07c7e9fee73a37c ""
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/ec-lmssbx10.tfm" 1256929440 11168 06d87f5698fd1b642d96449b7c8d90b0 ""
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/lmex10.tfm" 1256929440 992 ce925c9346c7613270a79afbee98c070 ""
@@ -51,14 +49,11 @@
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/rm-lmr6.tfm" 1256929440 11836 e3b6ce3e601aec94f64a536e7f4224d5 ""
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/rm-lmr7.tfm" 1256929440 11852 5a9022f105fd1ee2797df861e79ae9a0 ""
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/rm-lmr9.tfm" 1256929440 11884 c93929a6974dce79eabb778f219d7e18 ""
-  "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/ts1-lmr8.tfm" 1256929440 1584 a2d340944f7dc70e449dcdfd4f3f8533 ""
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/ts1-lmr9.tfm" 1256929440 1576 219e49590ff1846c6e9d9797f3bd2972 ""
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx7.pfb" 1256929440 119461 688b5cf3eb232c8cd2868757f6765296 ""
-  "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx8.pfb" 1256929440 125241 791aeb35ceacc2764a175b32709cc6a9 ""
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx9.pfb" 1256929440 126646 56e3d11e90816073e07cc59bd07ef384 ""
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb" 1256929440 120387 4904c2679a7b90fe9e17171d6c7c9dd0 ""
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb" 1256929440 123394 992f5e87d698d9e94717394c62580ea6 ""
-  "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb" 1256929440 122174 a2d5e73f396ddbeb3bdf5c79aea0993d ""
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb" 1256929440 121065 ba8daf2228d9e511988917831f1e22e9 ""
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb" 1256929440 119663 1a3a2206591ddc98c6d6c6271a282516 ""
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb" 1136849748 35941 adef23a721dd8354a4a2bf4434f1c484 ""
@@ -259,15 +254,15 @@
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/tex/latex/xifthen/xifthen.sty" 1448274436 5689 1bfa68243e89a54479e7d0580773c57e ""
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1695383086 2269 4fe6fb3396214c91f164d45faf9bec45 ""
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1695383086 20785 f7d1133a287929598a897c93f8f4c44b ""
-  "c:/Users/Martin/Documents/tdf-biker-analysis/report/report.tex" 1749158035 15055 95b1034f7e2fa08adc3df3118830dee7 ""
+  "c:/Users/Martin/Documents/tdf-biker-analysis/report/report.tex" 1749158819 15252 9c446cc108747483abcc186da2e76128 ""
   "examples.pdf" 1746460204 79024 e760e2553a47ea647bf0ad729c95265b ""
   "growth.pdf" 1746460204 57601 0a10febd2deaa82acc0288a76787a9bb ""
   "pnas-report.cls" 1746385165 14628 fc22ff36227dbdc499341685e932671a ""
   "pnasresearcharticle.sty" 1746385162 1275 7aec1205c12893a1c87d36790c959b86 ""
-  "report.aux" 1749158038 2310 8a02a449cf19cbdbc9fdd2b8291ec58b "pdflatex"
-  "report.bbl" 1749157591 4247 0a204268b96aa838afbf53b35692f98e "bibtex report"
-  "report.out" 1749158037 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "report.tex" 1749158035 15055 95b1034f7e2fa08adc3df3118830dee7 ""
+  "report.aux" 1749158821 2310 98f28f84b163b69dccd6f61e86b13b29 "pdflatex"
+  "report.bbl" 1749158780 4247 0a204268b96aa838afbf53b35692f98e "bibtex report"
+  "report.out" 1749158821 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "report.tex" 1749158819 15252 9c446cc108747483abcc186da2e76128 ""
   (generated)
   "report.aux"
   "report.log"
