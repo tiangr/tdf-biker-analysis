@@ -107,8 +107,58 @@ but none of those studies use network analysis approaches.
 
 \section*{Results}
 
-{\bf Main results supported by math, plots, tables, diagrams etc.}
+We generated six distinct Tour de France rider networks based on different edge-weighting schemes and analyzed them using PageRank and community detection. The Fruchterman-Reingold layout was used to visualize the rider networks, with Leiden clustering identifying communities in each. Leiden grouped bikers by generations. In visualization we only visualized top 2000 nodes (by PageRank) and labeled only best 30 of them.
 
+
+
+\subsection{Scaled Time Difference Network} 
+
+In the Scaled time difference network (Figure \ref{fig:scaled}), time gaps matter more in flat stages, where gaps are rare and less in mountains, where large gaps are common.
+\begin{figure}[H]
+  \includegraphics[width= 0.7\linewidth]{tdf_scaled_time_diff_fruchterman_reingold_layout_scaled_timediff_2000.png}
+  \caption{Scaled Time Difference Network}
+  \label{fig:scaled}
+\end{figure}
+\subsection{Pure Points Network}
+
+Pure Points network (Figure \ref{fig:purepoints}) creates a much sparser network focused purely on point-scoring performances. Riders who often place just outside point positions are excluded. It's best for identifying riders who consistently win or place in high-stakes point-scoring stages.
+\begin{figure}[H]
+  \includegraphics[width= 0.7\linewidth]{tdf_pure_points_fruchterman_reingold_layout_pure_points_2000.png}
+  \caption{Pure Points Network}
+  \label{fig:purepoints}
+\end{figure}
+\subsection{Points Network}
+
+In Points network (Figure \ref{fig:points}), the scores are allocated similarly to official rankings. So, a cyclist with more races will rank higher than a cyclist with less races, because he will have more points accumulated in his career so far.
+\begin{figure}[H]
+  \includegraphics[width= 0.7\linewidth]{tdf_points_fruchterman_reingold_layout_points_2000.png}
+  \caption{Points Network}
+  \label{fig:points}
+\end{figure}
+\subsection{Unweighted Network}
+
+In unweighted network (Figure \ref{fig:unweight}), all weights equal to value of 1. This means that the network gives higher scores to cyclists that are also rated highest on official rankings. It shows how consistent they were throughout their career. High PageRank means that the person was winning a lot (did not have many people who finished before him).
+\begin{figure}[H]
+  \includegraphics[width= 0.7\linewidth]{tdf_no_weights_fruchterman_reingold_layout_no_weights_2000.png}
+  \caption{Unweighted Network}
+  \label{fig:unweight}
+\end{figure}
+\subsection{Normalized Time Difference Network}
+
+Normalized time difference network (Figure \ref{fig:normalized}) is similar to the Time Difference Network, but the times are normalized. So for example 10 seconds in a shorter race means bigger dominance than 10 seconds in longer race. Doing that, we regularize different lengths of the stages.
+\begin{figure}[H]
+  \includegraphics[width= 0.7\linewidth]{tdf_normalized_time_diff_fruchterman_reingold_layout_normalized_timediff_2000.png}
+  \caption{Normalized Time Difference Network}
+  \label{fig:normalized}
+\end{figure}
+\subsection{Time Difference Network}
+
+Time Difference network (Figure \ref{fig:time}) tells us how (non)dominant the cyclist was. The more time difference there was between the cyclist and others, the higher score the cyclist got. So if one person participated in small amount of races, but he dominated greatly, he will be placed higher than someone who won more times but with smaller time margin.
+\begin{figure}[H]
+  \includegraphics[width= 0.7\linewidth]{tdf_time_diff_fruchterman_reingold_layout_time_diff_2000.png}
+  \caption{Time Difference Network}
+  \label{fig:time}
+\end{figure}
 
 \section*{Methods}
 
