@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.5)  5 JUN 2025 23:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.5)  8 JUN 2025 13:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1157,67 +1157,92 @@ Package lettrine.sty Info: Targeted height = 15.69254pt
 (lettrine.sty)             (for loversize=0, accent excluded),
 (lettrine.sty)             Lettrine height = 18.05571pt ({\fontfamily {lmss}\bfseries \fontsize {26pt}{28pt}\selectfont {I}});
 (lettrine.sty)             reported on input line 41.
-<examples.pdf, id=6, 620.3175pt x 188.705pt>
-File: examples.pdf Graphic file (type pdf)
-<use examples.pdf>
-Package pdftex.def Info: examples.pdf  used on input line 74.
-(pdftex.def)             Requested size: 221.48567pt x 67.37514pt.
-<growth.pdf, id=7, 649.42625pt x 175.65625pt>
-File: growth.pdf Graphic file (type pdf)
-<use growth.pdf>
-Package pdftex.def Info: growth.pdf  used on input line 75.
-(pdftex.def)             Requested size: 246.09686pt x 66.56244pt.
-LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 6.64998pt on input line 76.
-
-
-Package natbib Warning: Citation `Sub18a' on page 1 undefined on input line 76.
-
-
-Package natbib Warning: Citation `Sub18a' on page 1 undefined on input line 76.
-
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 9.49997pt on input line 80.
+(Font)              scaled to size 9.49997pt on input line 47.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 9.49997pt on input line 80.
+(Font)              scaled to size 9.49997pt on input line 47.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 5.69998pt on input line 87.
+(Font)              scaled to size 5.69998pt on input line 54.
 
 
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 6.64998pt on input line 75.
 [1{C:/Users/Martin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}
 
 
- <./examples.pdf> <./growth.pdf>]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 118.
+]
+<tdf_scaled_time_diff.png, id=68, 890.5772pt x 328.97906pt>
+File: tdf_scaled_time_diff.png Graphic file (type png)
+<use tdf_scaled_time_diff.png>
+Package pdftex.def Info: tdf_scaled_time_diff.png  used on input line 87.
+(pdftex.def)             Requested size: 246.09686pt x 90.90875pt.
+<tdf_pure_points.png, id=71, 680.5425pt x 612.03656pt>
+File: tdf_pure_points.png Graphic file (type png)
+<use tdf_pure_points.png>
+Package pdftex.def Info: tdf_pure_points.png  used on input line 98.
+(pdftex.def)             Requested size: 246.09686pt x 221.3229pt.
+<tdf_points.png, id=73, 666.23906pt x 650.43pt>
+File: tdf_points.png Graphic file (type png)
+<use tdf_points.png>
+Package pdftex.def Info: tdf_points.png  used on input line 109.
+(pdftex.def)             Requested size: 246.09686pt x 240.25833pt.
+
+
+<tdf_no_weights.png, id=75, 267.24844pt x 650.43pt>
+File: tdf_no_weights.png Graphic file (type png)
+<use tdf_no_weights.png>
+Package pdftex.def Info: tdf_no_weights.png  used on input line 121.
+(pdftex.def)             Requested size: 246.09686pt x 598.9785pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 125.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 6.64998pt on input line 125.
+[2 <./tdf_scaled_time_diff.png> <./tdf_pure_points.png> <./tdf_points.png>]
+<tdf_normalized_time_diff.png, id=90, 274.77657pt x 533.74406pt>
+File: tdf_normalized_time_diff.png Graphic file (type png)
+<use tdf_normalized_time_diff.png>
+Package pdftex.def Info: tdf_normalized_time_diff.png  used on input line 132.
+(pdftex.def)             Requested size: 246.09686pt x 478.05225pt.
+
+
+<tdf_time_diff.png, id=92, 499.11469pt x 640.64343pt>
+File: tdf_time_diff.png Graphic file (type png)
+<use tdf_time_diff.png>
+Package pdftex.def Info: tdf_time_diff.png  used on input line 144.
+(pdftex.def)             Requested size: 246.09686pt x 315.87311pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+[3 <./tdf_no_weights.png> <./tdf_normalized_time_diff.png>]
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 154.
  (C:\Users\Martin\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 
 
 
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 155.
-LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 6.64998pt on input line 155.
-[2{C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}] (report.bbl
+[4{C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc} <./tdf_time_diff.png>] (report.bbl
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <6> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 13.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 (Font)              scaled to size 5.69998pt on input line 13.
 )
 
-Package natbib Warning: There were undefined citations.
 
 
-
-
-
-[3
+[5
 
 ] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
@@ -1227,20 +1252,20 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-04-14>
  ***********
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             Checksum: 218F4FDAA706E3D1E635AE7686687C27;1014.
  ) 
 Here is how much of TeX's memory you used:
- 31049 strings out of 469940
- 578853 string characters out of 5468926
- 1092662 words of memory out of 5000000
- 56959 multiletter control sequences out of 15000+600000
- 726182 words of font info for 243 fonts, out of 8000000 for 9000
+ 31115 strings out of 469940
+ 580115 string characters out of 5468926
+ 1094880 words of memory out of 5000000
+ 56999 multiletter control sequences out of 15000+600000
+ 723626 words of font info for 252 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 117i,11n,121p,1055b,573s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx7.pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on report.pdf (3 pages, 346338 bytes).
+ 117i,11n,121p,1055b,523s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on report.pdf (5 pages, 983593 bytes).
 PDF statistics:
- 485 PDF objects out of 1000 (max. 8388607)
- 18 named destinations out of 1000 (max. 500000)
- 75799 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 163 PDF objects out of 1000 (max. 8388607)
+ 31 named destinations out of 1000 (max. 500000)
+ 73819 words of extra memory for PDF output out of 74296 (max. 10000000)
 

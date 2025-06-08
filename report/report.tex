@@ -39,43 +39,10 @@ enabling recognition of not only overall winners but also consistently high-perf
 \ifthenelse{\boolean{shortarticle}}{\ifthenelse{\boolean{singlecolumn}}{\abscontentformatted}{\abscontent}}{}
 
 \dropcap{I}{\bf ntroduction}
-The Tour de France is widely regarded as the most prestigious cycling event in the world. This multi-stage competition challenges elite cyclists across a variety of terrains—from flat sprints to grueling mountain climbs—testing both endurance and strategic skill. The race boasts a rich history of legendary athletes, from the universally acclaimed all-time great Eddy Merckx to emerging stars like Tadej Pogačar.
-
-Comparing cyclists across different eras, however, presents a significant challenge. Variations in competition formats, technological advancements, and changing race strategies make direct performance comparisons difficult. Traditional methods of comparison often rely on basic statistics such as the number of stage wins, podium finishes, or overall victories. While informative, these metrics can overlook the nuanced contributions of different rider types—such as climbers, sprinters, and time-trial specialists.
-
-Another possible approach involves analyzing physical performance indicators like average power output or speed. However, these metrics tend to favor modern cyclists who benefit from vastly superior equipment, training methods, and team support structures. As a result, such comparisons may not accurately reflect a rider's skill or impact within their competitive context.
-
+The Tour de France is widely regarded as the most prestigious cycling event in the world. This multi-stage competition challenges elite cyclists across a variety of terrains—from flat sprints to grueling mountain climbs—testing both endurance and strategic skill. The race boasts a rich history of legendary athletes, from the universally acclaimed all-time great Eddy Merckx to emerging stars like Tadej Pogačar. \par
+Comparing cyclists across different eras, however, presents a significant challenge. Variations in competition formats, technological advancements, and changing race strategies make direct performance comparisons difficult. Traditional methods of comparison often rely on basic statistics such as the number of stage wins, podium finishes, or overall victories. While informative, these metrics can overlook the nuanced contributions of different rider types—such as climbers, sprinters, and time-trial specialists. \par
+Another possible approach involves analyzing physical performance indicators like average power output or speed. However, these metrics tend to favor modern cyclists who benefit from vastly superior equipment, training methods, and team support structures. As a result, such comparisons may not accurately reflect a rider's skill or impact within their competitive context.\par
 To address these limitations, we propose a novel approach using network analysis to evaluate and compare Tour de France cyclists. By modeling rider interactions and relative performance across stages and editions of the race, we aim to produce a more context-sensitive and data-driven ranking that captures the complexity and diversity of rider achievements over more than a century of competition.
-
-%While general classification highlights the best overall cyclists, 
-%it misses certain cyclists who excel in specific domains such as consistent mountain climbers, sprinters and other stage specialists.
-
-%This project aims to accumulate all the Tour de France history by constructing a network that captures the relative performance of all riders in each stage from 1903 to 2024.
-%Historical results are obtained from ProCyclingStats.com, a comprehensive and publicly available cycling statistics database.
-%For each stage, a directed edge is created from a rider to every other rider who placed ahead of them, forming a stage-level performance network.
-%These individual networks of stages are then aggregated into a single multi-digraph, 
-%where nodes represent riders and multiple directed edges capture how frequently and consistently one rider was outperformed by another.
-%To better reflect the different dimensions of performance, we construct several variants of this network using different edge weighting strategies.
-%for example, weighting edges based on time gaps, positional gaps, or stage types (e.g., flat, hilly, mountain, time trial). 
-%This allows us to analyze the data from multiple perspectives and to highlight specific rider strengths that may not be apparent in overall classification rankings.
-
-%To rank the riders within these networks, we apply the PageRank algorithm \cite{Page1999}, originally developed to rank web pages based on link structure.
-%In our context, PageRank assesses not just how frequently a rider finishes ahead of others, but also the strength of the competitors they outperform. 
-%As a result, riders who consistently place ahead of highly ranked opponents receive higher scores. 
-%This method allows us to identify not only dominant overall champions, but also consistently strong performers and 
-%underrated specialists who might be overlooked by traditional rankings.
-
-%For the visualization and interpretation of the results, we first apply the Leiden clustering \cite{Traag2019} algorithm to detect community structure in the rider network.
-%This groups riders into a generation of riders. To visualize the network, we use the Fruchterman-Reingold \cite{Fruchterman1991} force-directed layout, 
-%which positions riders in a two-dimensional space based on their network proximity.
-
-
-\begin{figure}[t]\centering%
-	\includegraphics[width=0.9\linewidth]{examples}
-	\includegraphics[width=\linewidth]{growth}
-	\caption{Mandatory informative illustration highlighting main contributions.~\cite{Sub18a}}
-	\label{fig:example}
-\end{figure}
 
 \section*{Related work}
 The application of network analysis in sports research is vast; it can be used to uncover team dynamics, 
@@ -107,55 +74,74 @@ but none of those studies use network analysis approaches.
 
 \section*{Results}
 
-We generated six distinct Tour de France rider networks based on different edge-weighting schemes and analyzed them using PageRank and community detection. The Fruchterman-Reingold layout was used to visualize the rider networks, with Leiden clustering identifying communities in each. Leiden grouped bikers by generations. In visualization we only visualized top 2000 nodes (by PageRank) and labeled only best 30 of them.
-
+We generated six distinct Tour de France rider networks based on different edge-weighting schemes and analyzed them using PageRank and community detection. 
+The Fruchterman-Reingold layout was used to visualize the rider networks, with Leiden clustering identifying communities in each. 
+Leiden grouped bikers by generations. In visualization we only visualized top 2000 nodes (by PageRank) and labeled only best 30 of them, while increasing the size of performant riders and decreasing opacity for edges with lesser weight.
 
 
 \subsection{Scaled Time Difference Network} 
 
-In the Scaled time difference network (Figure \ref{fig:scaled}), time gaps matter more in flat stages, where gaps are rare and less in mountains, where large gaps are common.
+In the Scaled time difference network (Figure \ref{fig:scaled}), mountain stages and time trials are deemed as more important.
+In this network we observe riders that typically perform well in general classification, thus is a good approximation of the statistics table results.
 \begin{figure}[H]
-  \includegraphics[width= 0.7\linewidth]{tdf_scaled_time_diff_fruchterman_reingold_layout_scaled_timediff_2000.png}
+  \includegraphics[width= 1.0\linewidth]{tdf_scaled_time_diff.png}
   \caption{Scaled Time Difference Network}
   \label{fig:scaled}
 \end{figure}
+
 \subsection{Pure Points Network}
 
-Pure Points network (Figure \ref{fig:purepoints}) creates a much sparser network focused purely on point-scoring performances. Riders who often place just outside point positions are excluded. It's best for identifying riders who consistently win or place in high-stakes point-scoring stages.
+Pure Points network (Figure \ref{fig:purepoints}) creates a network focused purely on point-scoring 
+performances. Riders who often place just outside point positions are excluded. 
+It's best for identifying sprinters and GC contenders alike.
 \begin{figure}[H]
-  \includegraphics[width= 0.7\linewidth]{tdf_pure_points_fruchterman_reingold_layout_pure_points_2000.png}
+  \includegraphics[width= 1.0\linewidth]{tdf_pure_points.png}
   \caption{Pure Points Network}
   \label{fig:purepoints}
 \end{figure}
+
 \subsection{Points Network}
 
-In Points network (Figure \ref{fig:points}), the scores are allocated similarly to official rankings. So, a cyclist with more races will rank higher than a cyclist with less races, because he will have more points accumulated in his career so far.
+In Points network (Figure \ref{fig:points}), the scores are allocated similarly to official rankings. 
+So, a cyclist with more races will rank higher than a cyclist with less races, 
+because he will have more points accumulated in his career so far.
 \begin{figure}[H]
-  \includegraphics[width= 0.7\linewidth]{tdf_points_fruchterman_reingold_layout_points_2000.png}
+  \includegraphics[width= 1.0\linewidth]{tdf_points.png}
   \caption{Points Network}
   \label{fig:points}
 \end{figure}
+
 \subsection{Unweighted Network}
 
-In unweighted network (Figure \ref{fig:unweight}), all weights equal to value of 1. This means that the network gives higher scores to cyclists that are also rated highest on official rankings. It shows how consistent they were throughout their career. High PageRank means that the person was winning a lot (did not have many people who finished before him).
+In the unweighted network (Figure \ref{fig:unweight}), all weights equal to value of 1. 
+This means that the network gives higher scores to cyclists that are also rated highest on official rankings. 
+It shows how consistent they were throughout their career. 
+High PageRank means that the person was winning a lot (did not have many people who finished before him).
 \begin{figure}[H]
-  \includegraphics[width= 0.7\linewidth]{tdf_no_weights_fruchterman_reingold_layout_no_weights_2000.png}
+  \includegraphics[width= 1.0\linewidth]{tdf_no_weights.png}
   \caption{Unweighted Network}
   \label{fig:unweight}
 \end{figure}
+
 \subsection{Normalized Time Difference Network}
 
-Normalized time difference network (Figure \ref{fig:normalized}) is similar to the Time Difference Network, but the times are normalized. So for example 10 seconds in a shorter race means bigger dominance than 10 seconds in longer race. Doing that, we regularize different lengths of the stages.
+Normalized time difference network (Figure \ref{fig:normalized}) is similar to the Time Difference Network, 
+but the times are normalized. So for example 10 seconds in a shorter race means bigger dominance than 10 seconds in longer race. 
+Doing that, we regularize different lengths of the stages.
 \begin{figure}[H]
-  \includegraphics[width= 0.7\linewidth]{tdf_normalized_time_diff_fruchterman_reingold_layout_normalized_timediff_2000.png}
+  \includegraphics[width= 1.0\linewidth]{tdf_normalized_time_diff.png}
   \caption{Normalized Time Difference Network}
   \label{fig:normalized}
 \end{figure}
+
 \subsection{Time Difference Network}
 
-Time Difference network (Figure \ref{fig:time}) tells us how (non)dominant the cyclist was. The more time difference there was between the cyclist and others, the higher score the cyclist got. So if one person participated in small amount of races, but he dominated greatly, he will be placed higher than someone who won more times but with smaller time margin.
+Time Difference network (Figure \ref{fig:time}) tells us how (non)dominant the cyclist was. 
+The more time difference there was between the cyclist and others, the higher score the cyclist got. 
+So if one person participated in small amount of races, but he dominated greatly, 
+he will be placed higher than someone who won more times but with smaller time margin.
 \begin{figure}[H]
-  \includegraphics[width= 0.7\linewidth]{tdf_time_diff_fruchterman_reingold_layout_time_diff_2000.png}
+  \includegraphics[width= 1.0\linewidth]{tdf_time_diff.png}
   \caption{Time Difference Network}
   \label{fig:time}
 \end{figure}
@@ -183,8 +169,11 @@ For comparative analysis, we also explored combining the PageRank scores from di
 
 \section*{Discussion}
 
-This project presents a network-based analysis of Tour de France rider performance from 1903 to 2024. We constructed six different networks of riders using a range of edge-weighting strategies (time-based, point-based, and unweighted). With this, we tried to get different aspects of rider dominance and consistency across the races and tours. We used the PageRank algorithm to identify best-performing riders and not just overall winners. The Fruchterman-Reingold layout provided a visualisation of the rider's performance over time.
-
+This project presents a network-based analysis of Tour de France rider performance from 1903 to 2024. 
+We constructed six different networks of riders using a range of edge-weighting strategies (time-based, point-based, and unweighted). 
+With this, we tried to get different aspects of rider dominance and consistency across the races and tours. 
+We used the PageRank algorithm to identify best-performing riders and not just overall winners. 
+The Fruchterman-Reingold layout provided a visualisation of the rider's performance over time.
 
 
 Each of our six networks provided a unique look at the riders:
@@ -197,11 +186,22 @@ Each of our six networks provided a unique look at the riders:
     \item \textbf{Normalized Time Difference:} Improve fairness compared to Time Difference, since it normalizes stage length
 \end{itemize}
 
-This work analyses the history of Tour de France results, offering a broad view of rider performance across different eras. We introduced a new method for comparing riders using stage times and rankings. The use of multiple edge-weighting strategies provided a more deeper understanding of rider strengths. PageRank helped rank riders beyond just stage wins, while the Leiden algorithm revealed generational structures and clusters.
+This work analyses the history of Tour de France results, offering a broad view of rider performance across different eras. 
+We introduced a new method for comparing riders using stage times and rankings. 
+The use of multiple edge-weighting strategies provided a more deeper understanding of rider strengths. 
+PageRank helped rank riders beyond just stage wins, while the Leiden algorithm revealed generational structures and clusters.
 
-The general classification standings we used to create networks don't provide the whole view. By using diverse performance metrics and network modelling, we got patterns missing in more traditional rankings. With this, we can not only find the best riders by winning tours, but also by consistence performance and other metrics. Network analysis offers a more complex framework for the evaluation of successful professional riders in Tour de France.
+The general classification standings we used to create networks don't provide the whole view. 
+By using diverse performance metrics and network modelling, we got patterns missing in more traditional rankings. 
+With this, we can not only find the best riders by winning tours, but also by consistence performance and other metrics. 
+Network analysis offers a more complex framework for the evaluation of successful professional riders in Tour de France.
 
-In the future, we could explore temporal networks to track careers and performance. A deeper analysis could also reveal the best rider for specific stage types like time trials or summit finishes. To achieve this we could only look at important stages for each type. Additionally, we could use some interactive visualization tools to allow better insight into different rankings. Finally, applying this methodology to other Grand Tours like the Giro d’Italia or Vuelta a España  could offer valuable comparative insights.
+In the future, we could explore temporal networks to track careers and performance. 
+A deeper analysis could also reveal the best rider for specific stage types like time trials or summit finishes. 
+To achieve this we could only look at important stages for each type. 
+Additionally, we could use some interactive visualization tools to allow better insight into different rankings. 
+Finally, applying this methodology to other Grand Tours like the Giro d’Italia or Vuelta a España 
+could offer valuable comparative insights.
 
 % \acknow{The authors would like to\dots}
 % \showacknow{}

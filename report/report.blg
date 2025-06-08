@@ -5,11 +5,10 @@ Reallocating 'name_of_file' (item size: 1) to 9 items.
 The style file: unsrtnat.bst
 Reallocating 'name_of_file' (item size: 1) to 13 items.
 Database file #1: bibliography.bib
-Warning--I didn't find a database entry for "Sub18a"
 Warning--empty journal in Mukherjee2012-zt
 You've used 13 entries,
             2481 wiz_defined-function locations,
-            651 strings with 7133 characters,
+            649 strings with 7121 characters,
 and the built_in function-call counts, 4810 in all, are:
 = -- 386
 > -- 275
@@ -48,4 +47,4 @@ warning$ -- 1
 while$ -- 36
 width$ -- 0
 write$ -- 180
-(There were 2 warnings)
+(There was 1 warning)

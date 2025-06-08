@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex report"] 1749158780.03064 "report.aux" "report.bbl" "report" 1749158822.60179 0
+["bibtex report"] 1749383811.18684 "report.aux" "report.bbl" "report" 1749383820.4352 0
   "./bibliography.bib" 1749070769 18453 3e613532df6f7c906a38c8a41b7fb0fc ""
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/bibtex/bst/natbib/unsrtnat.bst" 1284455456 24550 a41a6405f4de768c43e871d9fbce2bc8 ""
-  "report.aux" 1749158821 2310 98f28f84b163b69dccd6f61e86b13b29 "pdflatex"
+  "report.aux" 1749383819 4064 3540851bd31493fb00e869e4ad6310c0 "pdflatex"
   (generated)
   "report.bbl"
   "report.blg"
   (rewritten before read)
-["pdflatex"] 1749158820.0476 "c:/Users/Martin/Documents/tdf-biker-analysis/report/report.tex" "report.pdf" "report" 1749158822.60288 0
+["pdflatex"] 1749383817.40518 "c:/Users/Martin/Documents/tdf-biker-analysis/report/report.tex" "report.pdf" "report" 1749383820.43625 0
   "C:/Users/Martin/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1746460443 82507 a9eef8696c92627b87e9975edea03b2a ""
   "C:/Users/Martin/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1746460239 13158165 d1160c62d07eebd9cf0991483c2f7307 ""
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -26,7 +26,6 @@
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msbm5.tfm" 1233951854 940 75ac932a52f80982a9f8ea75d03a34cf ""
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1233951854 940 228d6584342e91276bf566bcf9716b83 ""
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/cm/cmr9.tfm" 1136765053 1292 6b21b9c2c7bebb38aa2273f7ca0fb3af ""
-  "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/ec-lmbx7.tfm" 1256929440 12072 feea2d4511ce6b67cf0049876d122c6b ""
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/ec-lmbx9.tfm" 1256929440 12080 8da3d5e88196e4de175949ad7749b42f ""
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/ec-lmcsc10.tfm" 1256929440 11276 116dd5bea6621ce4a1999f96d876084c ""
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/ec-lmr10.tfm" 1256929440 12056 7e13df7fe4cbce21b072ba7c4f4deb6e ""
@@ -50,7 +49,6 @@
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/rm-lmr7.tfm" 1256929440 11852 5a9022f105fd1ee2797df861e79ae9a0 ""
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/rm-lmr9.tfm" 1256929440 11884 c93929a6974dce79eabb778f219d7e18 ""
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/tfm/public/lm/ts1-lmr9.tfm" 1256929440 1576 219e49590ff1846c6e9d9797f3bd2972 ""
-  "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx7.pfb" 1256929440 119461 688b5cf3eb232c8cd2868757f6765296 ""
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx9.pfb" 1256929440 126646 56e3d11e90816073e07cc59bd07ef384 ""
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb" 1256929440 120387 4904c2679a7b90fe9e17171d6c7c9dd0 ""
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb" 1256929440 123394 992f5e87d698d9e94717394c62580ea6 ""
@@ -254,15 +252,19 @@
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/tex/latex/xifthen/xifthen.sty" 1448274436 5689 1bfa68243e89a54479e7d0580773c57e ""
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-abspage.sty" 1695383086 2269 4fe6fb3396214c91f164d45faf9bec45 ""
   "C:/Users/Martin/AppData/Local/Programs/MiKTeX/tex/latex/zref/zref-base.sty" 1695383086 20785 f7d1133a287929598a897c93f8f4c44b ""
-  "c:/Users/Martin/Documents/tdf-biker-analysis/report/report.tex" 1749158819 15252 9c446cc108747483abcc186da2e76128 ""
-  "examples.pdf" 1746460204 79024 e760e2553a47ea647bf0ad729c95265b ""
-  "growth.pdf" 1746460204 57601 0a10febd2deaa82acc0288a76787a9bb ""
+  "c:/Users/Martin/Documents/tdf-biker-analysis/report/report.tex" 1749383817 16147 b23f6a60c4fc426933c642caac7081af ""
   "pnas-report.cls" 1746385165 14628 fc22ff36227dbdc499341685e932671a ""
   "pnasresearcharticle.sty" 1746385162 1275 7aec1205c12893a1c87d36790c959b86 ""
-  "report.aux" 1749158821 2310 98f28f84b163b69dccd6f61e86b13b29 "pdflatex"
-  "report.bbl" 1749158780 4247 0a204268b96aa838afbf53b35692f98e "bibtex report"
-  "report.out" 1749158821 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "report.tex" 1749158819 15252 9c446cc108747483abcc186da2e76128 ""
+  "report.aux" 1749383819 4064 3540851bd31493fb00e869e4ad6310c0 "pdflatex"
+  "report.bbl" 1749383811 4247 0a204268b96aa838afbf53b35692f98e "bibtex report"
+  "report.out" 1749383819 1014 218f4fdaa706e3d1e635ae7686687c27 "pdflatex"
+  "report.tex" 1749383817 16147 b23f6a60c4fc426933c642caac7081af ""
+  "tdf_no_weights.png" 1749381324 113911 1f8dac2995f0fee198ec8056b29296d5 ""
+  "tdf_normalized_time_diff.png" 1749381927 97988 361893fd953f6f1975cb63ddc66dc6fc ""
+  "tdf_points.png" 1749375162 258277 02615fb8b416b9403ec760196d5e4ff8 ""
+  "tdf_pure_points.png" 1749382036 149591 45bbc9f5cbb3347c2c6963b739f4e65b ""
+  "tdf_scaled_time_diff.png" 1749382103 128416 bf8babe52cda3be7e9ca15762cf50331 ""
+  "tdf_time_diff.png" 1749382285 132782 df03dd6a2b90cc327444238598955689 ""
   (generated)
   "report.aux"
   "report.log"
