@@ -76,75 +76,135 @@ but none of those studies use network analysis approaches.
 
 We generated six distinct Tour de France rider networks based on different edge-weighting schemes and analyzed them using PageRank and community detection. 
 The Fruchterman-Reingold layout was used to visualize the rider networks, with Leiden clustering identifying communities in each. 
-Leiden grouped bikers by generations. In visualization we only visualized top 2000 nodes (by PageRank) and labeled only best 30 of them, while increasing the size of performant riders and decreasing opacity for edges with lesser weight.
+Leiden grouped bikers by generations. In visualization we only visualized top 2000 nodes (by PageRank) and labeled only best 30 of them, 
+while increasing the size of nodes that represent performant riders and decreasing opacity for edges with lesser weight.
+
+\subsection{Time Difference Network}
+
+Time Difference network (Figure \ref{fig:time}) tells us how dominant a cyclist is in individual stages. 
+The more time difference there was between the cyclist and others, the higher score the cyclist got. 
+This consequently highlights elite climbers and one-stage specialists. However it mostly highlights riders in 
+the early years of TDF, where stages were incredibly long and riders had a much larger performance gap.
+Such riders include François Faber, Eugène Christophe and Gustave Garrigou.
+\begin{figure}[H]
+  \includegraphics[width= 1.0\linewidth]{tdf_time_diff.png}
+  \caption{Time Difference Network}
+  \label{fig:time}
+\end{figure}
 
 
 \subsection{Scaled Time Difference Network} 
 
 In the Scaled time difference network (Figure \ref{fig:scaled}), mountain stages and time trials are deemed as more important.
-In this network we observe riders that typically perform well in general classification, thus is a good approximation of the statistics table results.
+This network ended up highlighting older generations of riders, since the time difference among those riders is large.
 \begin{figure}[H]
   \includegraphics[width= 1.0\linewidth]{tdf_scaled_time_diff.png}
   \caption{Scaled Time Difference Network}
   \label{fig:scaled}
 \end{figure}
 
-\subsection{Pure Points Network}
-
-Pure Points network (Figure \ref{fig:purepoints}) creates a network focused purely on point-scoring 
-performances. Riders who often place just outside point positions are excluded. 
-It's best for identifying sprinters and GC contenders alike.
-\begin{figure}[H]
-  \includegraphics[width= 1.0\linewidth]{tdf_pure_points.png}
-  \caption{Pure Points Network}
-  \label{fig:purepoints}
-\end{figure}
-
-\subsection{Points Network}
-
-In Points network (Figure \ref{fig:points}), the scores are allocated similarly to official rankings. 
-So, a cyclist with more races will rank higher than a cyclist with less races, 
-because he will have more points accumulated in his career so far.
-\begin{figure}[H]
-  \includegraphics[width= 1.0\linewidth]{tdf_points.png}
-  \caption{Points Network}
-  \label{fig:points}
-\end{figure}
-
-\subsection{Unweighted Network}
-
-In the unweighted network (Figure \ref{fig:unweight}), all weights equal to value of 1. 
-This means that the network gives higher scores to cyclists that are also rated highest on official rankings. 
-It shows how consistent they were throughout their career. 
-High PageRank means that the person was winning a lot (did not have many people who finished before him).
-\begin{figure}[H]
-  \includegraphics[width= 1.0\linewidth]{tdf_no_weights.png}
-  \caption{Unweighted Network}
-  \label{fig:unweight}
-\end{figure}
-
 \subsection{Normalized Time Difference Network}
 
 Normalized time difference network (Figure \ref{fig:normalized}) is similar to the Time Difference Network, 
-but the times are normalized. So for example 10 seconds in a shorter race means bigger dominance than 10 seconds in longer race. 
-Doing that, we regularize different lengths of the stages.
+but the times are normalized. This puts more recent riders to the front but unfortunately not entirely, the list continues 
+to be dominated by older generations of riders.
 \begin{figure}[H]
   \includegraphics[width= 1.0\linewidth]{tdf_normalized_time_diff.png}
   \caption{Normalized Time Difference Network}
   \label{fig:normalized}
 \end{figure}
 
-\subsection{Time Difference Network}
+\subsection{Unweighted Network}
 
-Time Difference network (Figure \ref{fig:time}) tells us how (non)dominant the cyclist was. 
-The more time difference there was between the cyclist and others, the higher score the cyclist got. 
-So if one person participated in small amount of races, but he dominated greatly, 
-he will be placed higher than someone who won more times but with smaller time margin.
+In the unweighted network (Figure \ref{fig:unweight}), all weights equal to value of 1. 
+This network has a tendency to favor riders with many TDF apperances and above average results.
+For example, Jean Alavoine has never won the TDF general classification but has 11 apperances in the race, 
+all with high placements. This result is excellent for highlighting riders that have entertained the peloton for multiple years.
 \begin{figure}[H]
-  \includegraphics[width= 1.0\linewidth]{tdf_time_diff.png}
-  \caption{Time Difference Network}
-  \label{fig:time}
+  \includegraphics[width= 0.9\linewidth]{tdf_no_weights.png}
+  \caption{Unweighted Network}
+  \label{fig:unweight}
 \end{figure}
+
+\subsection{Points Network}
+
+In Points network (Figure \ref{fig:points}), we expect several more occurances of sprinters in the top ratings 
+while also seeing strong one day racers and GC contenders. This ended up being the case as the ranking highlighted 
+the likes of Mark Cavendish, Peter Sagan, Erik Zabel and Eddy Merckx.
+\begin{figure}[H]
+  \includegraphics[width= 1.0\linewidth]{tdf_points.png}
+  \caption{Points Network}
+  \label{fig:points}
+\end{figure}
+
+\subsection{Pure Points Network}
+
+Pure Points network (Figure \ref{fig:purepoints}) creates a network that puts extra emphasis on riders with finishes 
+in the top 20 in each stage. This approach highlights the likes of Tadej Pogačar, Mark Cavendish, Erik Zabel, Eddy Merckx.
+\begin{figure}[H]
+  \includegraphics[width= 1.0\linewidth]{tdf_pure_points.png}
+  \caption{Pure Points Network}
+  \label{fig:purepoints}
+\end{figure}
+
+
+Our gathered results reveal some potential issues in this ranking approach, namely the dominance of older generations of riders.
+This happens because those riders have had a much different pool of competitors with a larger performance gap. This consequently 
+boosts their rankings in graphs with large time differences. \par
+On the other hand, the results highlight riders with multiple Tour de France attendances and long periods of dominance, 
+suggesting they we're a prevelant rider in the peloton that entertained the public for several years. This justifies their ranking 
+even if they have never won the general classification. \par
+As for elite sprinters, it is difficult to generalize a graph that would purely rank only amongst sprinters without excluding dominant 
+general classification contenders. This can be partially combated with the help of substraction of PageRank scores. In one of our examples, 
+where we substracted the PageRank scores of the Points network by the PageRank scores of the Normalized Time Difference network, we obtained 
+excellent results that mostly highlighted strong sprinters. \par
+
+For the sake of comparison, we include a statistical table of the top 10 best riders by stages and another by jersey winners:
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{|l|r|r|r|r|r|}
+\hline
+\textbf{Rider} & \textbf{1st} & \textbf{2nd} & \textbf{3rd} & \textbf{4th} & \textbf{5th}\\
+\hline
+CAVENDISH Mark & 35 & 4  & 5  & 3  & 3  \\
+MERCKX Eddy    & 34 & 18 & 11 & 13 & 7  \\
+HINAULT Bernard& 28 & 12 & 6  & 9  & 6  \\
+LEDUCQ André   & 24 & 14 & 19 & 15 & 11 \\
+DARRIGADE André& 22 & 12 & 5  & 7  & 8  \\
+ARMSTRONG Lance& 22 & 11 & 6  & 6  & 3  \\
+FRANTZ Nicolas & 20 & 18 & 12 & 14 & 7  \\
+FABER François & 19 & 10 & 11 & 5  & 4  \\
+ALAVOINE Jean  & 17 & 10 & 8  & 10 & 5  \\
+\hline
+\end{tabular}
+\caption{Tour de France performance statistics of riders with most stage victories.}
+\label{tab:tdf_stats}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{|l|r|r|r|r|}
+\hline
+\textbf{Rider} & \textbf{GC} & \textbf{Points} & \textbf{KOM} & \textbf{Youth} \\
+\hline
+ARMSTRONG Lance   & 7 & 0 & 0 & 0 \\
+MERCKX Eddy       & 5 & 3 & 2 & 0 \\
+HINAULT Bernard   & 5 & 1 & 1 & 0 \\
+ANQUETIL Jacques  & 5 & 0 & 0 & 0 \\
+INDURÁIN Miguel   & 5 & 0 & 0 & 0 \\
+FROOME Chris      & 4 & 0 & 1 & 0 \\
+POGAČAR Tadej     & 3 & 0 & 2 & 4 \\
+THYS Philippe     & 3 & 0 & 0 & 0 \\
+BOBET Louison     & 3 & 0 & 1 & 0 \\
+LEMOND Greg       & 3 & 0 & 0 & 1 \\
+\hline
+\end{tabular}
+\caption{Tour de France performance statistics of jersey riders.}
+\label{tab:tdf_stats_2}
+\end{table}
+
+
 
 \section*{Methods}
 
@@ -164,7 +224,7 @@ The statistics table enables quick access to key summary information such as the
 
 To maintain clarity in the visual representation, we limited our graphs to the top 2,000 riders, with node size scaled according to PageRank score and only the top 30 riders explicitly highlighted while also coloring different generations of riders with the help of Leiden \cite{Traag2019} clustering algorithm.
 
-For comparative analysis, we also explored combining the PageRank scores from different network types by summing the scores, yielding a composite ranking that reflects multiple performance dimensions.
+For comparative analysis, we also explored combining the PageRank scores from different network types by summing or substracting the scores, yielding a composite ranking that reflects multiple performance dimensions.
 
 
 \section*{Discussion}
@@ -174,33 +234,23 @@ We constructed six different networks of riders using a range of edge-weighting 
 With this, we tried to get different aspects of rider dominance and consistency across the races and tours. 
 We used the PageRank algorithm to identify best-performing riders and not just overall winners. 
 The Fruchterman-Reingold layout provided a visualisation of the rider's performance over time.
+Each of our six networks provided a unique look at the riders and offered a way to combine different measures of importance to highlight specific types of riders.
 
 
-Each of our six networks provided a unique look at the riders:
-\begin{itemize}
-    \item \textbf{Scale Time Difference:} Find's dominance in flat stages where gaps are minimal
-    \item \textbf{Pure Points:} Identifies the stage winners or consistent high-place
-    \item \textbf{Points:} Identifies the riders with more races
-    \item \textbf{Unweighted:} Identifies consistent stage winners (general classification results)
-    \item \textbf{Time Difference:} Identifies riders with large winning margins (even in fewer races)
-    \item \textbf{Normalized Time Difference:} Improve fairness compared to Time Difference, since it normalizes stage length
-\end{itemize}
-
-This work analyses the history of Tour de France results, offering a broad view of rider performance across different eras. 
 We introduced a new method for comparing riders using stage times and rankings. 
-The use of multiple edge-weighting strategies provided a more deeper understanding of rider strengths. 
+The use of multiple edge-weighting strategies provided a deeper understanding of rider strengths. 
 PageRank helped rank riders beyond just stage wins, while the Leiden algorithm revealed generational structures and clusters.
 
 The general classification standings we used to create networks don't provide the whole view. 
 By using diverse performance metrics and network modelling, we got patterns missing in more traditional rankings. 
-With this, we can not only find the best riders by winning tours, but also by consistence performance and other metrics. 
-Network analysis offers a more complex framework for the evaluation of successful professional riders in Tour de France.
+With this, we can not only find the best riders by winning tours, but also by consistent performance and other metrics. 
+Network analysis offers a more complex framework for the evaluation of successful professional riders in the Tour de France.
 
 In the future, we could explore temporal networks to track careers and performance. 
 A deeper analysis could also reveal the best rider for specific stage types like time trials or summit finishes. 
-To achieve this we could only look at important stages for each type. 
-Additionally, we could use some interactive visualization tools to allow better insight into different rankings. 
-Finally, applying this methodology to other Grand Tours like the Giro d’Italia or Vuelta a España 
+To achieve this we could only look at important stages for each type. It would also be beneficial to penalize dominant riders in older generations for better general classification rankings.
+Additionally, we could use more efficient visualization tools to allow better insight into different rankings. 
+Finally, applying this methodology to other Grand Tours like the Giro d'Italia or Vuelta a España 
 could offer valuable comparative insights.
 
 % \acknow{The authors would like to\dots}
