@@ -76,7 +76,7 @@ but none of those studies use network analysis approaches.
 
 We generated six distinct Tour de France rider networks based on different edge-weighting schemes and analyzed them using PageRank and community detection. 
 The Fruchterman-Reingold layout was used to visualize the rider networks, with Leiden clustering identifying communities in each. 
-Leiden grouped bikers by generations. In visualization we only visualized top 2000 nodes (by PageRank) and labeled only best 30 of them, 
+Leiden grouped riders by generations. In visualization we only visualized top 2000 nodes (by PageRank) and labeled only best 30 of them, 
 while increasing the size of nodes that represent performant riders and decreasing opacity for edges with lesser weight.
 
 \subsection{Time Difference Network}
@@ -117,9 +117,9 @@ to be dominated by older generations of riders.
 \subsection{Unweighted Network}
 
 In the unweighted network (Figure \ref{fig:unweight}), all weights equal to value of 1. 
-This network has a tendency to favor riders with many TDF apperances and above average results.
-For example, Jean Alavoine has never won the TDF general classification but has 11 apperances in the race, 
-all with high placements. This result is excellent for highlighting riders that have entertained the peloton for multiple years.
+This network has a tendency to favor riders with many TDF appearances and above average results.
+For example, Jean Alavoine has never won the TDF general classification but has 11 appearances in the race, 
+all with high placements. This result effectively highlights riders with sustained participation and above-average stage performance, even in the absence of general classification victories.
 \begin{figure}[H]
   \includegraphics[width= 0.9\linewidth]{tdf_no_weights.png}
   \caption{Unweighted Network}
@@ -128,7 +128,7 @@ all with high placements. This result is excellent for highlighting riders that 
 
 \subsection{Points Network}
 
-In Points network (Figure \ref{fig:points}), we expect several more occurances of sprinters in the top ratings 
+In Points network (Figure \ref{fig:points}), we expect several more occurences of sprinters in the top ratings 
 while also seeing strong one day racers and GC contenders. This ended up being the case as the ranking highlighted 
 the likes of Mark Cavendish, Peter Sagan, Erik Zabel and Eddy Merckx.
 \begin{figure}[H]
@@ -152,11 +152,11 @@ Our gathered results reveal some potential issues in this ranking approach, name
 This happens because those riders have had a much different pool of competitors with a larger performance gap. This consequently 
 boosts their rankings in graphs with large time differences. \par
 On the other hand, the results highlight riders with multiple Tour de France attendances and long periods of dominance, 
-suggesting they we're a prevelant rider in the peloton that entertained the public for several years. This justifies their ranking 
+suggesting they were a prevelant rider in the peloton that entertained the public for several years. This justifies their ranking 
 even if they have never won the general classification. \par
 As for elite sprinters, it is difficult to generalize a graph that would purely rank only amongst sprinters without excluding dominant 
-general classification contenders. This can be partially combated with the help of substraction of PageRank scores. In one of our examples, 
-where we substracted the PageRank scores of the Points network by the PageRank scores of the Normalized Time Difference network, we obtained 
+general classification contenders. This limitation can be mitigated by subtracting PageRank scores across different network types to emphasize rider specializations. In one of our examples, 
+where we subtracted the PageRank scores of the Points network by the PageRank scores of the Normalized Time Difference network, we obtained 
 excellent results that mostly highlighted strong sprinters. \par
 
 For the sake of comparison, we include a statistical table of the top 10 best riders by stages and another by jersey winners:

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.5)  8 JUN 2025 20:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.5)  8 JUN 2025 21:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1214,7 +1214,7 @@ File: tdf_points.png Graphic file (type png)
 Package pdftex.def Info: tdf_points.png  used on input line 135.
 (pdftex.def)             Requested size: 246.09686pt x 240.25833pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 7047) has occurred while \output is active []
 
 
 
@@ -1268,15 +1268,15 @@ Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: ED3CB194FAEA3BDC2D4BC18A4AC1E08A;1014.
  ) 
 Here is how much of TeX's memory you used:
- 31201 strings out of 469940
- 581495 string characters out of 5468926
+ 31207 strings out of 469940
+ 581553 string characters out of 5468926
  1096065 words of memory out of 5000000
  57050 multiletter control sequences out of 15000+600000
- 743840 words of font info for 286 fonts, out of 8000000 for 9000
+ 744107 words of font info for 289 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  117i,11n,121p,1055b,535s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx9.pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr5.pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on report.pdf (5 pages, 987908 bytes).
+Output written on report.pdf (5 pages, 988003 bytes).
 PDF statistics:
  165 PDF objects out of 1000 (max. 8388607)
  33 named destinations out of 1000 (max. 500000)
